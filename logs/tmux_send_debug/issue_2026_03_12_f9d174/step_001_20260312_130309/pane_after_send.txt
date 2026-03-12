@@ -1,0 +1,637 @@
+[38;5;174m ▐[48;5;16m▛███▜[49m▌[39m   [1mClaude[0m [1mCode[0m [38;5;246mv2.1.74[39m
+[38;5;174m▝▜[48;5;16m█████[49m▛▘[39m  [38;5;246mSonnet[39m [38;5;246m4.6[39m [38;5;246m·[39m [38;5;246mAPI[39m [38;5;246mUsage[39m [38;5;246mBilling[39m
+[38;5;174m [39m [38;5;174m▘▘[39m [38;5;174m▝▝[39m    [38;5;246m/algonney/BRIDGE[39m
+
+[38;5;239m[48;5;237m❯ [38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+
+
+[38;5;231mCurrent step:[39m
+[38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+[38;5;231mCurrent mode:[39m
+[38;5;231mRead-only only. Continue from the latest findings only. Do not revisit the response-key issue.[39m
+
+[38;5;231mFocus on ONE action:[39m
+[38;5;231mInspect the frontend admin deposit types and filter UI to fully prove the remaining contract mismatches.[39m
+
+[38;5;231mSpecifically:[39m
+
+[38;5;231mFind the exact AdminDeposit, DepositStatus, and AdminDepositsResponse type/interface definitions.[39m
+
+[38;5;231mConfirm whether the admin deposits filter UI exposes status options such as approved or completed.[39m
+
+[38;5;231mConfirm whether any query params or filter values sent to the backend can include invalid statuses not recognized by the backend contract.[39m
+
+[38;5;231mConfirm whether the deposit row/details UI expects currency while backend returns coin, and show the exact rendering line(s).[39m
+
+[38;5;231mReturn only:[39m
+
+[38;5;231mSUMMARY[39m
+
+[38;5;231mFILES[39m
+
+[38;5;231mCODE PROOF[39m
+
+[38;5;231mCONCLUSION[39m
+
+[38;5;231mInstructions:[39m
+
+[38;5;231mDo only this step[39m
+
+[38;5;231mDo not modify code[39m
+
+[38;5;231mDo not propose fixes[39m
+
+[38;5;231mUse read-only inspection only[39m
+
+[38;5;231mSearch only the relevant frontend files, hooks, types, sections, components, and mappings[39m
+
+[38;5;231mBe precise and concise[39m
+
+[38;5;231mReturn evidence-based findings only[39m
+
+[38;5;231mInstructions:[39m
+[38;5;231m- Do only this step[39m
+[38;5;231m- Do not modify code[39m
+[38;5;231m- Use read-only inspection only[39m
+[38;5;231m- Search the relevant files, handlers, routes, workers, logs, and mappings[39m
+[38;5;231m- Be precise and concise[39m
+[38;5;231m- Return evidence-based findings only[39m
+
+[38;5;231mReturn in this structure:[39m
+
+[38;5;231m<<<CLAUDE_RESPONSE_START>>>[39m
+[38;5;231mSUMMARY:[39m
+[38;5;231m[1-2 sentence summary of findings][39m
+
+[38;5;231mFILES:[39m
+[38;5;231m- path: /path/to/file.ext[39m
+[38;5;231m- function: function_name[39m
+
+[38;5;231mFLOW:[39m
+[38;5;231m1. Step one[39m
+[38;5;231m2. Step two[39m
+
+[38;5;231mFINDINGS:[39m
+[38;5;231m- Evidence-based finding 1[39m
+[38;5;231m- Evidence-based finding 2[39m
+
+[38;5;231mLIKELY_BREAKPOINTS:[39m
+[38;5;231m- Potential issue location 1[39m
+[38;5;231m- Potential issue location 2[39m
+
+[38;5;231mRECOMMENDED_NEXT_CHECK:[39m
+[38;5;231m- Specific next action to verify[39m
+[38;5;231m<<<CLAUDE_RESPONSE_END>>>[39m
+
+[38;5;114m[49m●[39m [1mExplore[0m(Inspect admin deposit frontend types and filter UI)
+  ⎿  Done (32 tool uses · 73.8k tokens · 46s)
+[38;5;246m [39m [38;5;246m(ctrl+o[39m [38;5;246mto[39m [38;5;246mexpand)[39m
+
+[38;5;231m●[39m Now let me verify the key findings directly:
+
+[38;5;114m●[39m Searched for [1m10[0m patterns, read [1m2[0m files [38;5;246m(ctrl+o[39m [38;5;246mto[39m [38;5;246mexpand)[39m
+
+[38;5;231m●[39m Now I have all the evidence needed. Here is the complete response:
+
+  <<>>
+
+  [1mSUMMARY:[0m
+  The frontend renders [38;5;153mdeposit.currency[39m and [38;5;153mrow.currency[39m everywhere, but the backend stores and returns the field as [38;5;153mcoin[39m. Additionally, the backend uses [38;5;153mcredited[39m as the post-approval status, which exists in neither the AdminV2 type ([38;5;153mpending|approved|rejected[39m) nor the legacy type
+   ([38;5;153mpending|approved|rejected|completed[39m), causing approved deposits to be invisible or display broken status.
+
+  ---
+  [1mFILES:[0m
+  - path: [38;5;153m/algonney/BRIDGE/backend/app/routes/admin_deposit_routes.py[39m
+  - function: [38;5;153mlist_deposits_for_review[39m (line 80), [38;5;153mapprove_deposit[39m (line 222)
+  - path: [38;5;153m/algonney/BRIDGE/frontend/front/src/components/adminv2/types/index.ts[39m
+  - function: [38;5;153mAdminDeposit[39m, [38;5;153mDepositStatus[39m, [38;5;153mAdminDepositsResponse[39m
+  - path: [38;5;153m/algonney/BRIDGE/frontend/front/src/components/adminv2/sections/DepositsSection.tsx[39m
+  - function: table cell renderer (line 92), column accessor (line 97)
+  - path: [38;5;153m/algonney/BRIDGE/frontend/front/src/components/admin/DepositQueue.tsx[39m
+  - function: filter select (lines 179–182), status badge (lines 118–123)
+  - path: [38;5;153m/algonney/BRIDGE/frontend/front/src/services/adminApi.ts[39m
+  - function: [38;5;153mAdminDeposit[39m interface (line 166), [38;5;153mnormalizeDepositItem[39m (line 392)
+
+  ---
+  [1mFLOW:[0m
+  1. Frontend [38;5;153museAdminDeposits[39m hook calls [38;5;153mGET[39m [38;5;153m/api/v1/admin/deposits?status=<value>[39m
+  2. Backend [38;5;153mlist_deposits_for_review[39m queries MongoDB raw docs and returns them as [38;5;153mList[Dict][39m with no field normalization
+  3. MongoDB deposit documents have field [38;5;153mcoin[39m (e.g. [38;5;153mdeposit.get("coin",[39m [38;5;153m"USDT")[39m at line 250)
+  4. Backend returns [38;5;153m{[39m [38;5;153mitems:[39m [38;5;153m[...],[39m [38;5;153mtotal,[39m [38;5;153mhas_more[39m [38;5;153m}[39m where each item contains [38;5;153mcoin[39m, not [38;5;153mcurrency[39m
+  5. Frontend [38;5;153mDepositsSection.tsx[39m renders [38;5;153m{row.currency}[39m (line 92) and accesses [38;5;153maccessorKey:[39m [38;5;153m'currency'[39m (line 97) → [38;5;153mundefined[39m
+  6. Approved deposits: backend sets [38;5;153mstatus:[39m [38;5;153m"credited"[39m (line 244 guard check), but frontend types have no [38;5;153mcredited[39m value → status badge fails silently or shows nothing
+
+  ---
+  [1mFINDINGS:[0m
+
+  - [1m[38;5;153mcoin[39m vs[0m [1m[38;5;153mcurrency[39m field[0m [1mmismatch[0m [1m(CONFIRMED):[0m Backend MongoDB documents use field name [38;5;153mcoin[39m (lines 250, 282, 643 in [38;5;153madmin_deposit_routes.py[39m). Frontend [38;5;153mAdminDeposit[39m interface declares [38;5;153mcurrency:[39m [38;5;153mstring[39m (types/index.ts:48, adminApi.ts:170). All rendering code references [38;5;153m.currency
+[39m   → evaluates to [38;5;153mundefined[39m.
+
+  [32m//[39m [32mDepositsSection.tsx:92[39m [32m—[39m [32mrenders[39m [32mundefined[39m
+  {[34mtypeof[39m value === [31m'number'[39m ? value.toLocaleString() : value} {row.currency}
+
+  [32m//[39m [32mDepositsSection.tsx:97[39m [32m—[39m [32mreads[39m [32mnonexistent[39m [32mfield[39m
+  [36maccessorKey[39m: [31m'currency'[39m,
+
+  [32m#[39m [32madmin_deposit_routes.py:250[39m [32m—[39m [32mbackend[39m [32mreads[39m [32m'coin'[39m [32mfrom[39m [32mDB[39m
+  coin = deposit.get([31m"coin"[39m, [31m"USDT"[39m)
+  [32m#[39m [32m...line[39m [32m282[39m [32m—[39m [32mstored/returned[39m [32mas[39m [32m'coin'[39m
+  [31m"coin"[39m: coin,
+  - [1m[38;5;153mcredited[39m status[0m [1mnot[0m [1min[0m [1mfrontend[0m [1menum[0m [1m(CONFIRMED):[0m Backend uses [38;5;153m"credited"[39m as final approved status (line 244: [38;5;153mif[39m [38;5;153mdeposit.get("status")[39m [38;5;153m==[39m [38;5;153m"credited"[39m). Frontend AdminV2 [38;5;153mDepositStatus[39m [38;5;153m=[39m [38;5;153m'pending'[39m [38;5;153m|[39m [38;5;153m'approved'[39m [38;5;153m|[39m [38;5;153m'rejected'[39m has no [38;5;153mcredited[39m. Legacy [38;5;153madminApi.ts[39m has [38;5;153m'pending'[39m [38;5;153m|[39m
+  [38;5;153m'approved'[39m [38;5;153m|[39m [38;5;153m'rejected'[39m [38;5;153m|[39m [38;5;153m'completed'[39m — also no [38;5;153mcredited[39m. The [38;5;153mstatusVariantMap[39m in [38;5;153mDepositsSection.tsx[39m only maps three values; any [38;5;153mcredited[39m deposit hits no matching variant.
+  - [1mFilter[0m [1msends[0m [1minvalid[0m [1mstatus[0m [1mvalues[0m [1mto[0m [1mbackend:[0m Frontend AdminV2 filter sends [38;5;153mstatus=approved[39m or [38;5;153mstatus=rejected[39m to backend. Backend docstring (lines 81, 90) declares valid filter values as [38;5;153mpending_review[39m, [38;5;153mbelow_minimum[39m, [38;5;153mlate_to_expired_invoice[39m. When the backend receives
+  [38;5;153mstatus=approved[39m, it falls into the [38;5;153melse[39m branch at line 99 ([38;5;153mquery["status"][39m [38;5;153m=[39m [38;5;153m"approved"[39m) and queries MongoDB directly — this may return results only if MongoDB actually stores [38;5;153mstatus:[39m [38;5;153m"approved"[39m vs [38;5;153mstatus:[39m [38;5;153m"credited"[39m.
+  - [1mLegacy[0m [1m[38;5;153mDepositQueue.tsx[39m exposes[0m [1m[38;5;153mcompleted[39m status[0m [1mfilter[0m [1m(line[0m [1m182):[0m This value is sent to backend and passed directly to MongoDB as [38;5;153mquery["status"][39m [38;5;153m=[39m [38;5;153m"completed"[39m — if no documents have this status, zero records are returned silently.
+  - [1m[38;5;153mAdminDepositListResponse[39m returns[0m [1m[38;5;153mitems[39m not[0m [1m[38;5;153mdeposits[39m:[0m Backend model (line 31–35) returns [38;5;153mitems:[39m [38;5;153mList[Dict][39m. Frontend [38;5;153mAdminDepositsResponse[39m type (types/index.ts:~65) expects [38;5;153mdeposits:[39m [38;5;153mAdminDeposit[][39m. [3m(Previously[0m [3midentified[0m [3m—[0m [3mnoted[0m [3mhere[0m [3mfor[0m [3mcompleteness[0m [3mas[0m [3mit[0m [3mcompounds[0m [3mall[0m [3mother
+[0m  [3m rendering[0m [3mfailures.)[0m
+  - [1mNo[0m [1mfield[0m [1mnormalization[0m [1min[0m [1mbackend[0m [1mserialization:[0m [38;5;153mnormalizeDepositItem[39m in [38;5;153madminApi.ts:392[39m does [38;5;153m{[39m [38;5;153m...item,[39m [38;5;153mrisk_flags:[39m [38;5;153mnormalizeRiskFlags(...)[39m [38;5;153m}[39m — it spreads raw backend fields but does NOT remap [38;5;153mcoin[39m [38;5;153m→[39m [38;5;153mcurrency[39m. The raw [38;5;153mcoin[39m field passes through unchanged.
+
+  ---
+  [1mLIKELY_BREAKPOINTS:[0m
+
+  - [38;5;153mDepositsSection.tsx:92[39m — Currency column renders blank because [38;5;153mrow.currency[39m is [38;5;153mundefined[39m (field is [38;5;153mcoin[39m)
+  - [38;5;153madmin_deposit_routes.py:99[39m — Status filter passes frontend values ([38;5;153mapproved[39m, [38;5;153mrejected[39m) directly to MongoDB, but post-approval documents have [38;5;153mstatus:[39m [38;5;153m"credited"[39m, not [38;5;153mstatus:[39m [38;5;153m"approved"[39m → those records are excluded from filtered results
+  - [38;5;153mtypes/index.ts[39m [38;5;153mDepositStatus[39m union — Missing [38;5;153mcredited[39m means status badge component has no matching display case for approved/processed deposits
+  - [38;5;153mDepositsSection.tsx[39m [38;5;153mstatusVariantMap[39m — Only handles [38;5;153mpending[39m, [38;5;153mapproved[39m, [38;5;153mrejected[39m; [38;5;153mcredited[39m documents render with no variant/color
+
+  ---
+  [1mRECOMMENDED_NEXT_CHECK:[0m
+  - Query MongoDB [38;5;153mdeposit_transactions[39m collection directly for the distinct values of [38;5;153mstatus[39m field to confirm what actual statuses are stored (e.g. [38;5;153mcredited[39m, [38;5;153mpending[39m, [38;5;153mrejected[39m) vs what the frontend filter sends
+  - Confirm whether any deposit document in MongoDB has [38;5;153mstatus:[39m [38;5;153m"approved"[39m at all, or whether approval always transitions to [38;5;153mcredited[39m
+
+  <<>>
+
+[38;5;246m✻[39m [38;5;246mCogitated[39m [38;5;246mfor[39m [38;5;246m2m[39m [38;5;246m14s[39m
+
+[38;5;239m[48;5;237m❯ [38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+
+
+[38;5;231mCurrent step:[39m
+[38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+[38;5;231mCurrent mode:[39m
+[38;5;231mRead-only only. Continue from the latest findings only. Do not revisit already-proven frontend type/render mismatches.[39m
+
+[38;5;231mFocus on ONE action:[39m
+[38;5;231mInspect the actual MongoDB deposit data to prove which status values are really stored and whether approved deposits are persisted as credited rather than approved.[39m
+
+[38;5;231mSpecifically:[39m
+
+[38;5;231mFind the exact MongoDB collection used for admin deposits.[39m
+
+[38;5;231mInspect the distinct stored values of the status field in that collection.[39m
+
+[38;5;231mConfirm whether any documents exist with status: "approved".[39m
+
+[38;5;231mConfirm whether approved deposits are instead stored with status: "credited".[39m
+
+[38;5;231mShow a small number of concrete example documents/fields (only the minimal relevant fields) proving the stored statuses.[39m
+
+[38;5;231mIf possible, include counts by status.[39m
+
+[38;5;231mReturn only:[39m
+
+[38;5;231mSUMMARY[39m
+
+[38;5;231mFILES_OR_SOURCES[39m
+
+[38;5;231mDATA PROOF[39m
+
+[38;5;231mCONCLUSION[39m
+
+[38;5;231mInstructions:[39m
+
+[38;5;231mDo only this step[39m
+
+[38;5;231mRead-only only[39m
+
+[38;5;231mDo not modify code or data[39m
+
+[38;5;231mDo not propose fixes[39m
+
+[38;5;231mUse precise evidence from the real database and/or exact repository config showing the collection name[39m
+
+[38;5;231mKeep output concise and evidence-based[39m
+
+[38;5;231mInstructions:[39m
+[38;5;231m- Do only this step[39m
+[38;5;231m- Do not modify code[39m
+[38;5;231m- Use read-only inspection only[39m
+[38;5;231m- Search the relevant files, handlers, routes, workers, logs, and mappings[39m
+[38;5;231m- Be precise and concise[39m
+[38;5;231m- Return evidence-based findings only[39m
+
+[38;5;231mReturn in this structure:[39m
+
+[38;5;231m<<<CLAUDE_RESPONSE_START>>>[39m
+[38;5;231mSUMMARY:[39m
+[38;5;231m[1-2 sentence summary of findings][39m
+
+[38;5;231mFILES:[39m
+[38;5;231m- path: /path/to/file.ext[39m
+[38;5;231m- function: function_name[39m
+
+[38;5;231mFLOW:[39m
+[38;5;231m1. Step one[39m
+[38;5;231m2. Step two[39m
+
+[38;5;231mFINDINGS:[39m
+[38;5;231m- Evidence-based finding 1[39m
+[38;5;231m- Evidence-based finding 2[39m
+
+[38;5;231mLIKELY_BREAKPOINTS:[39m
+[38;5;231m- Potential issue location 1[39m
+[38;5;231m- Potential issue location 2[39m
+
+[38;5;231mRECOMMENDED_NEXT_CHECK:[39m
+[38;5;231m- Specific next action to verify[39m
+[38;5;231m<<<CLAUDE_RESPONSE_END>>>[39m
+
+[38;5;114m[49m●[39m Searched for [1m4[0m patterns, read [1m1[0m file [38;5;246m(ctrl+o[39m [38;5;246mto[39m [38;5;246mexpand)[39m
+
+[38;5;211m●[39m [1mBash[0m(python3 -c "
+      import asyncio…)
+  ⎿  [38;5;211mError:[39m [38;5;211mExit[39m [38;5;211mcode[39m [38;5;211m1[39m
+     [38;5;211m [39m [38;5;211mFile[39m [38;5;211m"<string>",[39m [38;5;211mline[39m [38;5;211m16[39m
+     [38;5;211m [39m   [38;5;211mpipeline[39m [38;5;211m=[39m [38;5;211m[{'\':[39m [38;5;211m{'_id':[39m [38;5;211m'\',[39m [38;5;211m'count':[39m [38;5;211m{'\':[39m [38;5;211m1}}}][39m
+     [38;5;211m [39m                [38;5;211m^^^^^^^^^^[39m
+     [38;5;211mSyntaxError:[39m [38;5;211minvalid[39m [38;5;211msyntax.[39m [38;5;211mPerhaps[39m [38;5;211myou[39m [38;5;211mforgot[39m [38;5;211ma[39m [38;5;211mcomma?[39m
+
+[38;5;114m●[39m [1mBash[0m(python3 << 'EOF'
+      import asyncio…)
+  ⎿  DISTINCT STATUSES: ['below_minimum', 'credited', 'manual_review', 'pending']
+     COUNTS BY STATUS: [{'_id': 'credited', 'count': 20}, {'_id': 'pending', 'count': 3}, {'_id': 'below_minimum', 'count': 1}, {'_id': 'manual_review', 'count': 1}]
+     SAMPLE FIELD KEYS: {'amount': 0.1, 'coin': 'USDT', 'status': 'below_minimum'}
+     [2m… +5 lines (ctrl+o to expand)[0m
+
+[38;5;239m[48;5;237m❯ [38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+
+
+[38;5;231mCurrent step:[39m
+[38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+[38;5;231mCurrent mode:[39m
+[38;5;231mRead-only only. Continue from the latest findings only. Do not repeat prior code inspection findings.[39m
+
+[38;5;231mFocus on ONE action only:[39m
+[38;5;231mRun a direct read-only MongoDB inspection for admin deposit records and prove the actual stored status values.[39m
+
+[38;5;231mRequired actions:[39m
+
+[38;5;231mIdentify the exact MongoDB database and collection used for deposit records.[39m
+
+[38;5;231mRun a read-only query to list distinct values of the status field in that collection.[39m
+
+[38;5;231mRun a read-only aggregation or counts-by-status query.[39m
+
+[38;5;231mCheck specifically whether any documents exist with status: "approved".[39m
+
+[38;5;231mCheck specifically whether documents exist with status: "credited".[39m
+
+[38;5;231mShow 1-3 minimal example documents with only these fields if present: _id, status, coin, amount, created_at, updated_at.[39m
+
+[38;5;231mReturn only:[39m
+
+[38;5;231mSUMMARY[39m
+
+[38;5;231mDB_TARGET[39m
+
+[38;5;231mCOMMANDS_RUN[39m
+
+[38;5;231mDATA PROOF[39m
+
+[38;5;231mCONCLUSION[39m
+
+[38;5;231mStrict rules:[39m
+
+[38;5;231mDo not inspect frontend code in this step[39m
+
+[38;5;231mDo not restate prior findings unless needed for context[39m
+
+[38;5;231mDo not modify any code or data[39m
+
+[38;5;231mDo not propose fixes[39m
+
+[38;5;231mIf DB access is unavailable, say exactly what blocked access and nothing else[39m
+
+[38;5;231mThis step is only successful if you provide actual database results, not code inference[39m
+
+[38;5;231mInstructions:[39m
+[38;5;231m- Do only this step[39m
+[38;5;231m- Do not modify code[39m
+[38;5;231m- Use read-only inspection only[39m
+[38;5;231m- Search the relevant files, handlers, routes, workers, logs, and mappings[39m
+[38;5;231m- Be precise and concise[39m
+[38;5;231m- Return evidence-based findings only[39m
+
+[38;5;231mReturn in this structure:[39m
+
+[38;5;231m<<<CLAUDE_RESPONSE_START>>>[39m
+[38;5;231mSUMMARY:[39m
+[38;5;231m[1-2 sentence summary of findings][39m
+
+[38;5;231mFILES:[39m
+[38;5;231m- path: /path/to/file.ext[39m
+[38;5;231m- function: function_name[39m
+
+[38;5;231mFLOW:[39m
+[38;5;231m1. Step one[39m
+[38;5;231m2. Step two[39m
+
+[38;5;231mFINDINGS:[39m
+[38;5;231m- Evidence-based finding 1[39m
+[38;5;231m- Evidence-based finding 2[39m
+
+[38;5;231mLIKELY_BREAKPOINTS:[39m
+[38;5;231m- Potential issue location 1[39m
+[38;5;231m- Potential issue location 2[39m
+
+[38;5;231mRECOMMENDED_NEXT_CHECK:[39m
+[38;5;231m- Specific next action to verify[39m
+[38;5;231m<<<CLAUDE_RESPONSE_END>>>[39m
+
+[38;5;231m[49m●[39m I have the live database results. Here is the complete response:
+
+  <<>>
+
+  [1mSUMMARY:[0m
+  Live MongoDB query confirms the [38;5;153mdeposit_transactions[39m collection stores [1mzero documents with [38;5;153mstatus: "approved"[0m — the only statuses present are [38;5;153mcredited[39m (20), [38;5;153mpending[39m (3), [38;5;153mbelow_minimum[39m (1), and [38;5;153mmanual_review[39m (1). Every document uses the field name [38;5;153mcoin[39m, not [38;5;153mcurrency[39m.
+
+  ---
+  [1mDB_TARGET:[0m
+  - Database: [38;5;153mtv_binance_bridge[39m
+  - Collection: [38;5;153mdeposit_transactions[39m
+  - Connection: [38;5;153mmongodb+srv://brdigedb.ehel2ub.mongodb.net[39m (from [38;5;153m/algonney/BRIDGE/backend/.env[39m)
+
+  ---
+  [1mCOMMANDS_RUN:[0m
+  [32m#[39m [32mDistinct[39m [32mstatus[39m [32mvalues[39m
+  [34mawait[39m db.deposit_transactions.distinct([31m'status'[39m)
+
+  [32m#[39m [32mCount[39m [32mby[39m [32mstatus[39m
+  pipeline = [{[31m"$group"[39m: {[31m"_id"[39m: [31m"$status"[39m, [31m"count"[39m: {[31m"$sum"[39m: [32m1[39m}}}]
+
+  [32m#[39m [32mSample[39m [32mdocs[39m [32mper[39m [32mstatus[39m [32m(fields:[39m [32mstatus,[39m [32mcoin,[39m [32mcurrency,[39m [32mamount)[39m
+  [34mawait[39m db.deposit_transactions.find_one({[31m'status'[39m: <value>}, {...})
+
+  ---
+  [1mDATA[0m [1mPROOF:[0m
+
+  [1mDistinct[0m [1mstatuses[0m [1min[0m [1mcollection:[0m
+  ['below_minimum', 'credited', 'manual_review', 'pending']
+
+  [1mCounts[0m [1mby[0m [1mstatus:[0m
+
+  ┌───────────────┬────────────────────┐
+  │    status     │       count        │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mcredited[39m      │ 20                 │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mpending[39m       │ 3                  │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mbelow_minimum[39m │ 1                  │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mmanual_review[39m │ 1                  │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mapproved[39m      │ [1m0[0m [1m—[0m [1mdoes[0m [1mnot[0m [1mexist[0m │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mrejected[39m      │ [1m0[0m [1m—[0m [1mdoes[0m [1mnot[0m [1mexist[0m │
+  ├───────────────┼────────────────────┤
+  │ [38;5;153mcompleted[39m     │ [1m0[0m [1m—[0m [1mdoes[0m [1mnot[0m [1mexist[0m │
+  └───────────────┴────────────────────┘
+
+  [1mSample[0m [1mdocument[0m [1mfield[0m [1mshape:[0m
+  { [36m"amount"[39m: [32m0.1[39m, [36m"coin"[39m: [31m"USDT"[39m, [36m"status"[39m: [31m"below_minimum"[39m }
+  → Field is [38;5;153mcoin[39m, NOT [38;5;153mcurrency[39m. [38;5;153mcurrency[39m key is absent from all documents.
+
+  [1mSample[0m [1m[38;5;153mcredited[39m document:[0m
+  { [36m"coin"[39m: [31m"USDT"[39m, [36m"amount"[39m: [32m5.0[39m, [36m"status"[39m: [31m"credited"[39m }
+
+  [1mSample[0m [1m[38;5;153mpending[39m document:[0m
+  { [36m"coin"[39m: [31m"USDT"[39m, [36m"amount"[39m: [32m0.1[39m, [36m"status"[39m: [31m"pending"[39m }
+
+  ---
+  [1mCONCLUSION:[0m
+
+  Three concrete contract failures are now proven with live data:
+
+  1. [1m[38;5;153mapproved[39m does[0m [1mnot[0m [1mexist[0m [1min[0m [1mDB.[0m The frontend filter sends [38;5;153mstatus=approved[39m; the backend queries [38;5;153mdb.deposit_transactions.find({"status":[39m [38;5;153m"approved"})[39m → returns 0 results. All 20 approved deposits are stored as [38;5;153mstatus:[39m [38;5;153m"credited"[39m. These records are entirely invisible in the
+  admin UI when the [38;5;153mApproved[39m filter is selected.
+  2. [1m[38;5;153mcoin[39m field[0m [1m—[0m [1mnot[0m [1m[38;5;153mcurrency[39m.[0m Every document in the collection has [38;5;153mcoin:[39m [38;5;153m"USDT"[39m. The frontend renders [38;5;153mrow.currency[39m and [38;5;153mdeposit.currency[39m → evaluates to [38;5;153mundefined[39m on every row. Amount column shows only the number with no coin label.
+  3. [1m[38;5;153mmanual_review[39m not[0m [1min[0m [1many[0m [1mfrontend[0m [1mtype.[0m The DB has 1 document with [38;5;153mstatus:[39m [38;5;153m"manual_review"[39m, which is absent from both [38;5;153mDepositStatus[39m unions in the frontend. That record will display with a broken/missing status badge.
+
+  <<>>
+
+[38;5;246m✻[39m [38;5;246mCooked[39m [38;5;246mfor[39m [38;5;246m46s[39m
+
+[38;5;239m[48;5;237m❯ [38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+
+
+[38;5;231mCurrent step:[39m
+[38;5;231mRead-only only. Inspect the algonney.com backend code path for the admin deposits endpoint end-to-end.[39m
+
+[38;5;231mGoal for this single step:[39m
+
+[38;5;231mFind the exact admin deposits API route/handler/service/DTO/query used by the frontend.[39m
+
+[38;5;231mProve the response envelope field name returned by backend (items, deposits, or other).[39m
+
+[38;5;231mProve the exact status field name and status values emitted for deposit rows (for example pending/completed/confirmed/etc.).[39m
+
+[38;5;231mShow the specific files and line references that prove this.[39m
+
+[38;5;231mDo not change code. Do not inspect unrelated pages. Focus only on the backend contract returned by the admin deposits endpoint.[39m
+
+[38;5;231mInstructions:[39m
+[38;5;231m- Do only this step[39m
+[38;5;231m- Do not modify code[39m
+[38;5;231m- Use read-only inspection only[39m
+[38;5;231m- Search the relevant files, handlers, routes, workers, logs, and mappings[39m
+[38;5;231m- Be precise and concise[39m
+[38;5;231m- Return evidence-based findings only[39m
+
+[38;5;231mReturn in this structure:[39m
+
+[38;5;231m<<<CLAUDE_RESPONSE_START>>>[39m
+[38;5;231mSUMMARY:[39m
+[38;5;231m[1-2 sentence summary of findings][39m
+
+[38;5;231mFILES:[39m
+[38;5;231m- path: /path/to/file.ext[39m
+[38;5;231m- function: function_name[39m
+
+[38;5;231mFLOW:[39m
+[38;5;231m1. Step one[39m
+[38;5;231m2. Step two[39m
+
+[38;5;231mFINDINGS:[39m
+[38;5;231m- Evidence-based finding 1[39m
+[38;5;231m- Evidence-based finding 2[39m
+
+[38;5;231mLIKELY_BREAKPOINTS:[39m
+[38;5;231m- Potential issue location 1[39m
+[38;5;231m- Potential issue location 2[39m
+
+[38;5;231mRECOMMENDED_NEXT_CHECK:[39m
+[38;5;231m- Specific next action to verify[39m
+[38;5;231m<<<CLAUDE_RESPONSE_END>>>[39m
+
+[38;5;114m[49m●[39m Searched for [1m2[0m patterns, read [1m1[0m file [38;5;246m(ctrl+o to expand)[39m
+
+[38;5;114m●[39m [1mBash[0m(python3 << 'EOF'
+      import asyncio…)
+  ⎿  === SAMPLE DOC FIELD SETS ===
+     ['_id', 'amount', 'below_minimum', 'coin', 'confirmations', 'created_at', 'from_address', 'manual_review_reason', 'minimum_required', 'network', 'provider_ref', 'requires_manual_review', 'status', 'to_address', 'tx_hash', 'updated_at', 'user_id'] -> status: below_minimu
+     m | coin: USDT | currency: None
+     [2m… +18 lines (ctrl+o to expand)[0m
+
+[38;5;231m●[39m <<>>
+
+  [1mSUMMARY:[0m
+  The backend [38;5;153mGET /api/v1/admin/deposits[39m returns a JSON envelope with key [38;5;153mitems[39m (not [38;5;153mdeposits[39m), and every document in [38;5;153mdeposit_transactions[39m uses [38;5;153mcoin[39m (never [38;5;153mcurrency[39m). The only real statuses stored are [38;5;153mcredited[39m, [38;5;153mpending[39m, [38;5;153mbelow_minimum[39m, and [38;5;153mmanual_review[39m — [38;5;153mapproved[39m, [38;5;153mrejected[39m, and
+  [38;5;153mcompleted[39m do not exist in the database at all.
+
+  ---
+  [1mFILES:[0m
+  - path: [38;5;153m/algonney/BRIDGE/backend/app/routes/admin_deposit_routes.py[39m
+  - function: [38;5;153mlist_deposits_for_review[39m (line 80), [38;5;153mAdminDepositListResponse[39m (line 31)
+  - path: [38;5;153m/algonney/BRIDGE/backend/app/main.py[39m
+  - function: [38;5;153mapp.include_router(admin_deposit_router,[39m [38;5;153m...)[39m (line 779)
+  - path: [38;5;153m/algonney/BRIDGE/backend/app/api_main.py[39m
+  - function: [38;5;153mapp.include_router(admin_deposit_router,[39m [38;5;153m...)[39m (line 626)
+
+  ---
+  [1mFLOW:[0m
+  1. Frontend calls [38;5;153mGET[39m [38;5;153m/api/v1/admin/deposits?status=<value>&page=<n>&page_size=<n>[39m
+  2. Route registered in both [38;5;153mmain.py:779[39m and [38;5;153mapi_main.py:626[39m via [38;5;153madmin_deposit_router[39m
+  3. Handler [38;5;153mlist_deposits_for_review[39m (line 80) builds a MongoDB query against [38;5;153mdeposit_transactions[39m
+  4. If [38;5;153mstatus[39m [38;5;153m==[39m [38;5;153m"pending_review"[39m → queries [38;5;153mrequires_manual_review:[39m [38;5;153mTrue[39m; otherwise passes the value directly as [38;5;153mquery["status"][39m [38;5;153m=[39m [38;5;153mstatus[39m (line 99)
+  5. Raw MongoDB documents are returned with no field transformation — only [38;5;153m_id[39m is converted to string [38;5;153mid[39m (line 121)
+  6. Response is serialized as [38;5;153mAdminDepositListResponse[39m with top-level key [38;5;153mitems[39m (line 33)
+
+  ---
+  [1mFINDINGS:[0m
+
+  - [1mResponse[0m [1menvelope[0m [1mkey[0m [1mis[0m [1m[38;5;153mitems[39m,[0m [1mnot[0m [1m[38;5;153mdeposits[0m (line 33, 124–128):
+  [34mclass[39m [34mAdminDepositListResponse(BaseModel):[39m
+      items: [2m[36mList[0m[[2m[36mDict[0m]   [32m#[39m [32m←[39m [32mkey[39m [32mis[39m [32m'items'[39m
+      total: [36mint[39m
+      has_more: [36mbool[39m
+  - Backend returns [38;5;153m{[39m [38;5;153m"items":[39m [38;5;153m[...],[39m [38;5;153m"total":[39m [38;5;153m25,[39m [38;5;153m"has_more":[39m [38;5;153mfalse[39m [38;5;153m}[39m. Frontend [38;5;153mAdminDepositsResponse[39m type expects [38;5;153m{[39m [38;5;153mdeposits:[39m [38;5;153m[...],[39m [38;5;153mtotal,[39m [38;5;153mpage,[39m [38;5;153mpage_size[39m [38;5;153m}[39m — mismatched on both the array key ([38;5;153mitems[39m vs [38;5;153mdeposits[39m) and pagination shape ([38;5;153mhas_more[39m vs [38;5;153mpage[39m/[38;5;153mpage_size[39m).
+  - [1mField[0m [1m[38;5;153mcoin[39m confirmed[0m [1mpresent;[0m [1m[38;5;153mcurrency[39m confirmed[0m [1mabsent[0m [1min[0m [1mall[0m [1mdocuments.[0m Live query across all 25 documents: every doc has [38;5;153mcoin:[39m [38;5;153m"USDT"[39m, [38;5;153mcurrency:[39m [38;5;153mNone[39m (key does not exist). Backend emits raw Mongo doc — no remapping of [38;5;153mcoin[39m [38;5;153m→[39m [38;5;153mcurrency[39m anywhere in the route handler.
+  - [1mStored[0m [1mstatuses[0m [1mproven:[0m [1m[38;5;153mcredited[39m(20),[0m [1m[38;5;153mpending[39m(3),[0m [1m[38;5;153mbelow_minimum[39m(1),[0m [1m[38;5;153mmanual_review[39m(1).[0m Zero documents with [38;5;153mapproved[39m, [38;5;153mrejected[39m, or [38;5;153mcompleted[39m. Frontend filter sends [38;5;153mstatus=approved[39m → backend executes [38;5;153mdb.deposit_transactions.find({"status":[39m [38;5;153m"approved"})[39m → 0 results returned — the
+   20 credited deposits are fully invisible.
+  - [1m[38;5;153mcredited[39m docs[0m [1mhave[0m [1madditional[0m [1mfields[0m [1mnot[0m [1min[0m [1many[0m [1mfrontend[0m [1mtype:[0m [38;5;153mcredited_at[39m, [38;5;153mledger_id[39m, [38;5;153mdeposit_id[39m, [38;5;153mgateway_event_id[39m, [38;5;153mgateway_payment_id[39m, [38;5;153mlog_index[39m — none of these are in the [38;5;153mAdminDeposit[39m interface.
+  - [1mFilter[0m [1mparameter[0m [1mmismatch:[0m Backend docstring (line 81, 90) documents valid filter values as [38;5;153mpending_review[39m, [38;5;153mbelow_minimum[39m, [38;5;153mlate_to_expired_invoice[39m. Frontend sends [38;5;153mpending[39m, [38;5;153mapproved[39m, [38;5;153mrejected[39m. Of these, only [38;5;153mpending[39m matches an actual stored status and returns results.
+
+  ---
+  [1mLIKELY_BREAKPOINTS:[0m
+
+  - [38;5;153mAdminDepositsResponse[39m in [38;5;153mtypes/index.ts[39m — expects [38;5;153mdeposits[][39m, receives [38;5;153mitems[][39m → array is always [38;5;153mundefined[39m, table renders empty regardless of filter
+  - [38;5;153mlist_deposits_for_review:99[39m — [38;5;153mquery["status"][39m [38;5;153m=[39m [38;5;153mstatus[39m passes frontend-sent values ([38;5;153mapproved[39m) directly to Mongo; no mapping to actual stored values ([38;5;153mcredited[39m)
+  - [38;5;153mDepositsSection.tsx:92,97[39m — renders [38;5;153mrow.currency[39m; field does not exist in any document → coin label always blank
+  - [38;5;153mstatusVariantMap[39m in [38;5;153mDepositsSection.tsx[39m — no entry for [38;5;153mcredited[39m, [38;5;153mbelow_minimum[39m, or [38;5;153mmanual_review[39m → status badge broken for 22 of 25 records
+
+  ---
+  [1mRECOMMENDED_NEXT_CHECK:[0m
+  - Confirm the exact frontend hook call: does [38;5;153museAdminDeposits[39m use [38;5;153mresponse.deposits[39m or [38;5;153mresponse.items[39m to populate the table, and verify there is no adapter/normalizer between the API call and the component state
+
+  <<>>
+
+[38;5;246m✻[39m [38;5;246mCrunched[39m [38;5;246mfor[39m [38;5;246m49s[39m
+
+[38;5;239m[48;5;237m❯ [38;5;231mYou are assisting in a controlled investigation loop.[39m
+
+[38;5;231mCurrent issue:[39m
+[38;5;231mInvestigate, identify, and fix admin deposit page missing records and wrong status display[39m
+
+
+
+[38;5;231mCurrent step:[39m
+[38;5;231mRead-only only. Inspect the frontend admin deposits flow from API call to table rendering.[39m
+
+[38;5;231mGoal for this single step:[39m
+
+[38;5;231mTrace the exact frontend path for the admin deposits page: API client/hook/types/component.[39m
+
+[38;5;231mProve whether the frontend reads response.deposits or response.items.[39m
+
+[38;5;231mProve whether any normalization/adapter exists for:[39m
+
+[38;5;231mcoin → currency[39m
+
+[38;5;231mbackend statuses (credited, manual_review, below_minimum, etc.) → UI statuses[39m
+
+[38;5;231mIdentify the exact line(s) where the table becomes empty or the status/currency display breaks.[39m
+
+[38;5;231mReturn specific files and line references only for this frontend path.[39m
+
+[38;5;231mDo not change code. Do not propose fixes yet. Focus only on proving the frontend breakpoint(s).[39m
+
+[38;5;231mInstructions:[39m
+[38;5;231m- Do only this step[39m
+[38;5;231m- Do not modify code[39m
+[38;5;231m- Use read-only inspection only[39m
+[38;5;231m- Search the relevant files, handlers, routes, workers, logs, and mappings[39m
+[38;5;231m- Be precise and concise[39m
+[38;5;231m- Return evidence-based findings only[39m
+
+[38;5;231mReturn in this structure:[39m
+
+[38;5;231m<<<CLAUDE_RESPONSE_START>>>[39m
+[38;5;231mSUMMARY:[39m
+[38;5;231m[1-2 sentence summary of findings][39m
+
+[38;5;231mFILES:[39m
+[38;5;231m- path: /path/to/file.ext[39m
+[38;5;231m- function: function_name[39m
+
+[38;5;231mFLOW:[39m
+[38;5;231m1. Step one[39m
+[38;5;231m2. Step two[39m
+
+[38;5;231mFINDINGS:[39m
+[38;5;231m- Evidence-based finding 1[39m
+[38;5;231m- Evidence-based finding 2[39m
+
+[38;5;231mLIKELY_BREAKPOINTS:[39m
+[38;5;231m- Potential issue location 1[39m
+[38;5;231m- Potential issue location 2[39m
+
+[38;5;231mRECOMMENDED_NEXT_CHECK:[39m
+[38;5;231m- Specific next action to verify[39m
+[38;5;231m<<<CLAUDE_RESPONSE_END>>>[39m
+[49m
+[38;5;174m·[39m [38;5;174mEncha[38;5;216mnti[38;5;174mng…[39m
+
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[38;5;246m❯ [7m[39m [0m
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[39m  [38;5;211m⏵⏵[39m [38;5;211mbypass[39m [38;5;211mpermissions[39m [38;5;211mon[38;5;246m (shift+tab[39m [38;5;246mto[39m [38;5;246mcycle)[39m [38;5;246m·[39m [38;5;246mesc[39m [38;5;246mto[39m [38;5;246minterrupt[39m
+

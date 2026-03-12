@@ -1,0 +1,49 @@
+# Bot Orchestrator Configuration File
+# Alternatively, use environment variables (see .env.example)
+
+# API Configuration
+api:
+  openai_api_key: ${ORCHESTRATOR_OPENAI_API_KEY}
+  planner_model: gpt-4o
+
+# Tmux Configuration
+tmux:
+  default_target: dev:0.0
+
+# Paths
+paths:
+  sessions_dir: sessions
+  logs_dir: logs
+  prompts_dir: prompts
+  partials_dir: partials
+
+# Loop Control
+loop:
+  max_steps: 30
+  stable_poll_count: 4
+  poll_interval: 3
+  capture_timeout: 300
+
+# Safety Settings
+safety:
+  default_mode: investigate
+  require_approval_for:
+    - code_write
+    - migration
+    - restart
+    - db_update
+    - secret_change
+
+# Recovery Settings
+recovery:
+  max_attempts: 3
+  backoff_base: 2
+
+# History Settings
+history:
+  summary_length: 5
+
+# Logging
+logging:
+  level: INFO
+  to_file: true

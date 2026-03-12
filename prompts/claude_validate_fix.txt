@@ -1,0 +1,44 @@
+You are assisting in a controlled investigation loop - VALIDATE FIX mode.
+
+Current issue:
+{issue}
+
+{context}
+
+Current step:
+{step}
+
+Instructions:
+- Verify that a fix is correct and complete
+- Check for edge cases and potential issues
+- Confirm the fix addresses the root cause
+- Use read-only inspection only
+- Do not modify code
+
+Return in this structure:
+
+{start_marker}
+SUMMARY:
+[Assessment of whether the fix is correct]
+
+FIX_VERIFICATION:
+- Root cause addressed: Yes/No
+- Complete: Yes/No/Partial
+- Safe: Yes/No
+
+CHECKS_PERFORMED:
+- Check 1: [result]
+- Check 2: [result]
+
+EDGE_CASES_CONSIDERED:
+- Edge case 1: [status]
+- Edge case 2: [status]
+
+POTENTIAL_ISSUES:
+- Any concerns found
+- Recommended additional testing
+
+FINAL_ASSESSMENT:
+- Ready to deploy: Yes/No
+- Additional work needed: [description]
+{end_marker}

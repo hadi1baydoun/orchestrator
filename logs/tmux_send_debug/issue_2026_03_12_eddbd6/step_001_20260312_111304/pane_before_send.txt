@@ -1,0 +1,101 @@
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ claude --dangerously-skip-permissions
+claude: command not found
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ which claude
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ which claude
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ command -v claude
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ curl -fsSL https://claude.ai/install.sh | bash
+mkdir: cannot create directory ‘/home/claudeuser/.claude’: No space left on device
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  3.2M  1.6G   1% /run
+efivarfs        256K   27K  225K  11% /sys/firmware/efi/efivars
+/dev/sda1       150G  145G     0 100% /
+tmpfs           7.7G     0  7.7G   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/sda15      253M  146K  252M   1% /boot/efi
+tmpfs           1.6G   24K  1.6G   1% /run/user/0
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ du -sh /root/* 2>/dev/null | sort -h
+du -sh /home/* 2>/dev/null | sort -h
+du -sh /var/* 2>/dev/null | sort -h
+4.0K    /home/eren
+4.0K    /home/root
+16K     /home/claudeuser
+0       /var/lock
+0       /var/run
+4.0K    /var/crash
+4.0K    /var/local
+4.0K    /var/mail
+4.0K    /var/opt
+24K     /var/spool
+28K     /var/tmp
+28K     /var/www
+44K     /var/snap
+2.1M    /var/backups
+129M    /var/cache
+488M    /var/lib
+1.1G    /var/log
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ curl -fsSL https://claude.ai/install.sh | bash
+Setting up Claude Code...
+
+[38;5;114m✔ [1mClaude Code successfully installed![0m
+
+  [38;5;246mVersion: [38;5;174m2.1.74[39m
+
+  [38;5;246mLocation: [38;5;231m~/.local/bin/claude[39m
+
+
+  [38;5;246mNext:[39m [38;5;246mRun[39m [1m[38;5;174mclaude[0m [1m[38;5;174m--help[0m[38;5;246m to[39m [38;5;246mget[39m [38;5;246mstarted[39m
+
+[38;5;220m⚠[39m [38;5;220mSetup[39m [38;5;220mnotes:[39m
+  [38;5;246m•[39m [38;5;246mNative[39m [38;5;246minstallation[39m [38;5;246mexists[39m [38;5;246mbut[39m [38;5;246m~/.local/bin[39m [38;5;246mis[39m [38;5;246mnot[39m [38;5;246min[39m [38;5;246myour[39m [38;5;246mPATH.[39m [38;5;246mRun:[39m
+
+  [38;5;246mecho[39m [38;5;246m'export[39m [38;5;246mPATH="$HOME/.local/bin:$PATH"'[39m [38;5;246m>>[39m [38;5;246m~/.bashrc[39m [38;5;246m&&[39m [38;5;246msource[39m [38;5;246m~/.bashrc[39m
+
+
+✅ Installation complete!
+
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ which claude
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
+hash -r
+which claude
+/home/claudeuser/.local/bin/claude
+[1m[32mclaudeuser@ubunito-algonney[0m:[1m[34m~[0m$ claude --dangerously-skip-permissions
+[38;5;174m╭───[39m [38;5;174mClaude Code[39m [38;5;246mv2.1.74[39m [38;5;174m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮[39m
+[38;5;174m│[39m                                                    [2m[38;5;174m│[0m [1m[38;5;174mTips for getting started[0m                                                                                                  [38;5;174m│[39m
+[38;5;174m│[39m                 [1mWelcome back Hadi![0m                 [2m[38;5;174m│[0m Run /init to create a CLAUDE.md file with instructions for Claude                                                         [38;5;174m│[39m
+[38;5;174m│[39m                                                    [2m[38;5;174m│[0m Note: You have launched claude in your home directory. For the best experience, launch it in a project directory instead. [38;5;174m│[39m
+[38;5;174m│[39m                      [38;5;174m ▐[48;5;16m▛███▜[49m▌[39m                      [2m[38;5;174m│[0m [2m[38;5;174m─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m [38;5;174m│[39m
+[38;5;174m│[39m                      [38;5;174m▝▜[48;5;16m█████[49m▛▘[39m                     [2m[38;5;174m│[0m [1m[38;5;174mRecent activity[0m                                                                                                           [38;5;174m│[39m
+[38;5;174m│[39m                      [38;5;174m  ▘▘ ▝▝  [39m                     [2m[38;5;174m│[0m [38;5;246mNo recent activity[39m                                                                                                        [38;5;174m│[39m
+[38;5;174m│[39m [38;5;246mSonnet 4.6 · API Usage Billing · Hadi‘s Individual[39m [2m[38;5;174m│[0m                                                                                                                           [38;5;174m│[39m
+[38;5;174m│[39m [38;5;246m Org[39m                                               [2m[38;5;174m│[0m                                                                                                                           [38;5;174m│[39m
+[38;5;174m│[39m                  [38;5;246m/home/claudeuser[39m                  [2m[38;5;174m│[0m                                                                                                                           [38;5;174m│[39m
+[38;5;174m╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯[39m
+
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[39m❯ [7m [0m
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[39m  [38;5;211m⏵⏵[39m [38;5;211mbypass[39m [38;5;211mpermissions[39m [38;5;211mon[38;5;246m (shift+tab[39m [38;5;246mto[39m [38;5;246mcycle)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

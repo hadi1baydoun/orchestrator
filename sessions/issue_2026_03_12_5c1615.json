@@ -1,0 +1,30 @@
+{
+  "session_id": "issue_2026_03_12_5c1615",
+  "title": "Investigate admin deposit page missing records and wrong status display",
+  "issue_description": "Investigate an issue where the admin deposit page may not be showing all deposits and may not correctly display whether deposits are pending or completed. Systems involved may include AlgonneyPay, treasury events, algonney.com backend, database queries, admin API endpoints, and frontend table/status mapping. Start in investigate mode, read-only only, with one and only one step per cycle. For each step, focus on the single highest-priority check needed to trace the deposit data path end-to-end and determine the exact root cause. Do not change code, schema, or data. Stop only when the issue is proven, blocked, or clearly ready for a fix proposal.",
+  "issue_seed_prompt": "Investigate admin deposit page missing records and wrong status display",
+  "operator_constraints": null,
+  "project_context": null,
+  "status": "blocked",
+  "mode": "investigate",
+  "project": "algonney",
+  "tmux_target": "claude_bot:0.0",
+  "created_at": "2026-03-12T10:41:32.041215",
+  "updated_at": "2026-03-12T10:41:38.487589",
+  "step_count": 0,
+  "max_steps": 30,
+  "history": [],
+  "approval": {
+    "status": "none",
+    "request_type": null,
+    "reason": null,
+    "approved_commands": [],
+    "denied_reason": null,
+    "requested_at": null,
+    "decided_at": null
+  },
+  "resolution_summary": null,
+  "stall_reason": "Unexpected error: No CDP browser found at http://127.0.0.1:9222 (or ORCHESTRATOR_CDP_URL). Start Chrome with --remote-debugging-port=9222, open ChatGPT, then rerun.",
+  "last_checkpoint": "2026-03-12T10:41:32.041215",
+  "recovery_attempts": 0
+}

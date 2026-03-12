@@ -1,0 +1,55 @@
+{
+  "session_id": "issue_2026_03_12_ecc700",
+  "title": "Investigate, identify, and fix admin deposit page missing records and wrong status display",
+  "issue_description": "Investigate an issue where the admin deposit page may not be showing all deposits and may not correctly display whether deposits are pending or completed. Systems involved may include AlgonneyPay, treasury events, algonney.com backend, database queries, admin API endpoints, and frontend table/status mapping. Work step by step with one and only one step per cycle. First investigate the full deposit data path end-to-end, then identify and prove the exact root cause, then propose and implement the fix, and finally validate that the page shows all deposits correctly and displays the correct pending/completed status. Changes are allowed only after the issue is clearly proven. Prefer read-only investigation first, then move to fix mode only when the root cause is confirmed. Stop only when the issue is fully resolved, blocked, or requires explicit human approval for a risky action.",
+  "issue_seed_prompt": "Investigate, identify, and fix admin deposit page missing records and wrong status display",
+  "operator_constraints": null,
+  "project_context": null,
+  "status": "blocked",
+  "mode": "investigate",
+  "project": "algonney",
+  "tmux_target": "claude_bot:0.0",
+  "created_at": "2026-03-12T12:17:20.863632",
+  "updated_at": "2026-03-12T12:20:41.441175",
+  "step_count": 1,
+  "max_steps": 30,
+  "history": [
+    {
+      "step_number": 1,
+      "planner_status": "continue",
+      "step_title": "Trace admin deposit API path and query logic",
+      "prompt_for_claude": "Read-only only. Do one focused investigation step: trace the admin deposit page data path from frontend request to backend query.\n\nTasks:\n\nFind the admin deposit page component and the exact API request it makes.\n\nFind the backend route/handler/service/repository that serves that request.\n\nShow the exact query, filters, joins, ordering, pagination, and status derivation/mapping used for deposits.\n\nSummarize the end-to-end path in a compact chain:\nfrontend page -> frontend hook/client -> HTTP endpoint -> handler -> service -> DB query/table/view -> response fields/status mapping\n\nDo not change code.\n\nOutput required:\n\nfiles/functions involved\n\nexact endpoint and request params\n\nexact DB source/query\n\nany obvious places where deposits could be omitted or statuses mistranslated",
+      "claude_output": "SUMMARY:\nThe admin deposit page is permanently empty because the frontend reads data?.deposits but the backend returns the key items. Additionally, the frontend's status vocabulary (pending|approved|rejected) does not match the backend's actual stored values\n(pending|confirmed|credited|rejected|below_minimum|manual_review), making status display and filtering broken for all non-rejected deposits.\n\nFILES:\n- path: /algonney/BRIDGE/frontend/front/src/components/adminv2/sections/DepositsSection.tsx\n- function: DepositsSectionInner\n- path: /algonney/BRIDGE/frontend/front/src/components/adminv2/hooks/useAdminDeposits.ts\n- function: useAdminDeposits\n- path: /algonney/BRIDGE/frontend/front/src/components/adminv2/lib/adminApi.ts\n- function: adminApi.get\n- path: /algonney/BRIDGE/frontend/front/src/components/adminv2/types/index.ts\n- function: AdminDepositsResponse, DepositStatus, AdminDeposit\n- path: /algonney/BRIDGE/backend/app/routes/admin_deposit_routes.py\n- function: list_deposits_for_review\n\nFLOW:\n1. DepositsSection.tsx mounts \u2192 calls useAdminDeposits({ page, page_size:20, sort:'submitted_at', order:'desc', status? })\n2. useAdminDeposits builds URLSearchParams with those keys and calls adminApi.get<AdminDepositsResponse>('/api/v1/admin/deposits?page=1&page_size=20&sort=submitted_at&order=desc')\n3. adminApi.get does fetch(API_URL + path) with Bearer token \u2014 no transformation\n4. Backend GET /api/v1/admin/deposits handler receives request \u2014 silently ignores page, page_size, sort, order (only reads status, limit, cursor)\n5. Handler builds MongoDB query: {} (no filter) or { requires_manual_review: true } if status=pending_review, or { status: <value> } for other values\n6. Queries deposit_transactions collection: .find(query).sort(\"_id\", -1).limit(51) \u2014 no joins, no user lookup, no field projection\n7. Returns { items: [...raw docs with _id\u2192id], total: int, has_more: bool }\n8. Frontend receives response typed as AdminDepositsResponse \u2014 reads data?.deposits (key mismatch: backend sends items) \u2192 resolves to undefined\n9. const deposits = data?.deposits || [] \u2192 always [] \u2192 table is always empty\n10. Status column: calls statusVariantMap[value as DepositStatus] \u2014 map only covers pending|approved|rejected; any credited/confirmed/manual_review/below_minimum returns undefined \u2192 broken badge\n\nFINDINGS:\n- [ROOT CAUSE \u2014 Empty table] DepositsSection.tsx:243: data?.deposits || []. Backend AdminDepositListResponse (admin_deposit_routes.py:31) uses field name items, not deposits. Frontend never receives rows regardless of what the DB contains.\n- [ROOT CAUSE \u2014 Wrong status] types/index.ts:41: DepositStatus = 'pending' | 'approved' | 'rejected'. Backend sets status: \"credited\" on approve (admin_deposit_routes.py:317) and status: \"rejected\" on reject. Value \"approved\" is never written to the DB. statusVariantMap in\nDepositsSection.tsx:17-21 has no entry for credited, confirmed, manual_review, below_minimum.\n- [Filter broken] Status filter option <option value=\"approved\"> sends status=approved to backend. Backend does { status: \"approved\" } query against deposit_transactions \u2014 no document will ever have that value \u2192 0 results returned.\n- [Pagination broken] Frontend sends page=1&page_size=20; backend only supports cursor + limit (default 50). page/page_size are ignored. Backend always returns first 50 docs by _id DESC regardless of page requested.\n- [Sort broken] Frontend default sort field is submitted_at; backend ignores the sort param entirely, always sorts by _id DESC. Field submitted_at does not exist in raw deposit_transactions documents \u2014 backend stores created_at.\n- [Missing field user_email] AdminDeposit.user_email (types/index.ts:46) is rendered in the User column. The list endpoint returns raw documents with no user join \u2192 field is always undefined \u2192 User column always blank.\n- [Field name mismatch currency vs coin] Frontend renders row.currency (DepositsSection.tsx:92) and accessorKey:'currency' (line 98). Backend stores coin. Currency column always blank.\n\nLIKELY_BREAKPOINTS:\n- DepositsSection.tsx:243 \u2014 data?.deposits || [] \u2192 wrong key, should be data?.items\n- admin_deposit_routes.py:31 \u2014 AdminDepositListResponse field items vs frontend expectation deposits\n- types/index.ts:41 \u2014 DepositStatus missing credited, confirmed, manual_review, below_minimum\n- DepositsSection.tsx:17-21 \u2014 statusVariantMap missing entries for actual backend status values\n- admin_deposit_routes.py:317 \u2014 \"status\": \"credited\" (not \"approved\") written on admin approval\n- useAdminDeposits.ts:25-29 \u2014 sends page/page_size/sort/order; backend ignores all four\n\nRECOMMENDED_NEXT_CHECK:\n- Confirm the backend response shape by checking if any other endpoint or version of the deposits list route exists that returns deposits key (search for \"deposits\" as a response field in all backend route files)\n- Verify actual deposit_transactions document field names (coin vs currency, created_at vs submitted_at) by checking the deposit model or migration file at /algonney/BRIDGE/backend/app/models/deposit_models.py and\n/algonney/BRIDGE/backend/app/migrations/deposit_transaction_indexes.py\n<<>>\n\n\u273b Cooked for 32s",
+      "claude_summary": "The admin deposit page is permanently empty because the frontend reads data?.deposits but the backend returns the key items. Additionally, the frontend's status vocabulary (pending|approved|rejected) does not match the backend's actual stored values (pending|confirmed|credited|rejected|below_minimum|manual_review), making status display and filtering broken for all non-rejected deposits.",
+      "planner_interpretation": "Before checking missing rows or wrong statuses, we need to prove exactly which frontend request powers the admin deposit page and which backend handler/query supplies it. This isolates whether records are lost in the UI, API, or database mapping layer.",
+      "timestamp": "2026-03-12T12:18:38.639714",
+      "files_touched": [
+        "/algonney/BRIDGE/frontend/front/src/components/adminv2/sections/DepositsSection.tsx",
+        "/algonney/BRIDGE/frontend/front/src/components/adminv2/hooks/useAdminDeposits.ts",
+        "/algonney/BRIDGE/frontend/front/src/components/adminv2/lib/adminApi.ts",
+        "/algonney/BRIDGE/frontend/front/src/components/adminv2/types/index.ts",
+        "/algonney/BRIDGE/backend/app/routes/admin_deposit_routes.py",
+        "/algonney/BRIDGE/frontend/front/src/components/adminv2/sections/DepositsSection.ts",
+        "DepositsSection.ts",
+        "admin_deposit_routes.py",
+        "types/index.ts",
+        "useAdminDeposits.ts",
+        "/algonney/BRIDGE/backend/app/models/deposit_models.py",
+        "/algonney/BRIDGE/backend/app/migrations/deposit_transaction_indexes.py"
+      ]
+    }
+  ],
+  "approval": {
+    "status": "none",
+    "request_type": null,
+    "reason": null,
+    "approved_commands": [],
+    "denied_reason": null,
+    "requested_at": null,
+    "decided_at": null
+  },
+  "resolution_summary": null,
+  "stall_reason": "Unknown error type: BrowserBridgeError: Failed to get response: ChatGPT response timed out after 120000ms",
+  "last_checkpoint": "2026-03-12T12:18:38.639714",
+  "recovery_attempts": 1
+}

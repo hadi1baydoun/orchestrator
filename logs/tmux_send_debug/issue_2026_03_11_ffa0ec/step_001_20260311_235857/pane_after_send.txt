@@ -1,0 +1,1 @@
+[snapshot_capture_error] TmuxCommandFailed: Tmux command timed out

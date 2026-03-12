@@ -1,0 +1,43 @@
+You are assisting in a controlled investigation loop.
+
+Current issue:
+{issue}
+
+{context}
+
+Current step:
+{step}
+
+Instructions:
+- Do only this step
+- Do not modify code
+- Use read-only inspection only
+- Search the relevant files, handlers, routes, workers, logs, and mappings
+- Be precise and concise
+- Return evidence-based findings only
+
+Return in this structure:
+
+{start_marker}
+SUMMARY:
+[1-2 sentence summary of findings]
+
+FILES:
+- path: /path/to/file.ext
+- function: function_name
+
+FLOW:
+1. Step one
+2. Step two
+
+FINDINGS:
+- Evidence-based finding 1
+- Evidence-based finding 2
+
+LIKELY_BREAKPOINTS:
+- Potential issue location 1
+- Potential issue location 2
+
+RECOMMENDED_NEXT_CHECK:
+- Specific next action to verify
+{end_marker}

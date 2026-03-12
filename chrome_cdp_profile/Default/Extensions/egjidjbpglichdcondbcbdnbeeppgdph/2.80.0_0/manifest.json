@@ -1,0 +1,57 @@
+{
+   "action": {
+      "default_icon": "icons/light/32px.png",
+      "default_popup": "popup.html",
+      "default_title": "__MSG_appName__"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": false,
+      "js": [ "oneTap.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": false,
+      "js": [ "tokenScanner.js" ],
+      "matches": [ "https://x.com/*", "https://twitter.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "host_permissions": [ "https://*/*", "http://localhost/*", "http://127.0.0.1/*", "http://0.0.0.0/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnO0ipv3MCMVTQzXWnXEy+b1H4UKRZlxfYBTC7pFOP0PuNtInwuzcWbJY4HljExt+y6lzhIjRRD/h9n/RW695OcST95CPKaEc5/tBvaecfbmCg+/oECKQcF9QvmEX0QWlvfurLJ57t5Nh10SUqpCuqWQyCjHAPPibMXzLvRd0HzB5kwk3k5N727VJejjCy+dieExTKb0Ya7PtzDO/UuMAva6lfMpfnhSeA8+MSEf0NDcepuIhYDCUyP8DRhly/Ya32t98UGWU9RlVJvLtyptVBeYV79aKr5LIa/81AZYTkmwbXhTNCCBKt/03IHZy+/IcxNB1EISe4OoOoe6cT4ArEQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "permissions": [ "alarms", "tabs", "storage", "clipboardWrite", "notifications", "scripting", "sidePanel", "gcm" ],
+   "side_panel": {
+      "default_path": "sidepanel.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.80.0",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*/*" ],
+      "resources": [ "inpage.js" ]
+   }, {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "fonts/*" ]
+   }, {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "wallet-core.*" ]
+   } ]
+}

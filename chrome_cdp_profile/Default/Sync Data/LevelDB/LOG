@@ -1,0 +1,27 @@
+2026/03/11-21:31:51.225 2974 Reusing MANIFEST d:\bot_orchestrator\chrome_cdp_profile\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/03/11-21:31:51.227 2974 Recovering log #4
+2026/03/11-21:31:51.227 2974 Reusing old log d:\bot_orchestrator\chrome_cdp_profile\Default\Sync Data\LevelDB/000004.log 
+2026/03/11-21:32:04.615 1204 Level-0 table #8: started
+2026/03/11-21:32:04.618 1204 Level-0 table #8: 99240 bytes OK
+2026/03/11-21:32:04.621 1204 Delete type=0 #4
+2026/03/11-21:32:31.835 1204 Level-0 table #10: started
+2026/03/11-21:32:31.839 1204 Level-0 table #10: 98832 bytes OK
+2026/03/11-21:32:31.841 1204 Delete type=0 #7
+2026/03/11-22:27:52.856 5328 Level-0 table #12: started
+2026/03/11-22:27:52.863 5328 Level-0 table #12: 104162 bytes OK
+2026/03/11-22:27:52.869 5328 Delete type=0 #9
+2026/03/11-22:57:14.821 1204 Level-0 table #14: started
+2026/03/11-22:57:14.829 1204 Level-0 table #14: 110378 bytes OK
+2026/03/11-22:57:14.834 1204 Delete type=0 #11
+2026/03/12-00:11:53.006 4fe4 Level-0 table #16: started
+2026/03/12-00:11:53.031 4fe4 Level-0 table #16: 110347 bytes OK
+2026/03/12-00:11:53.032 4fe4 Delete type=0 #13
+2026/03/12-00:11:53.033 4fe4 Compacting 4@0 + 1@1 files
+2026/03/12-00:11:53.037 4fe4 Generated table #17@0: 72 keys, 11499 bytes
+2026/03/12-00:11:53.037 4fe4 Compacted 4@0 + 1@1 files => 11499 bytes
+2026/03/12-00:11:53.038 4fe4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/03/12-00:11:53.038 4fe4 Delete type=2 #8
+2026/03/12-00:11:53.038 4fe4 Delete type=2 #10
+2026/03/12-00:11:53.038 4fe4 Delete type=2 #12
+2026/03/12-00:11:53.038 4fe4 Delete type=2 #14
+2026/03/12-00:11:53.038 4fe4 Delete type=2 #16

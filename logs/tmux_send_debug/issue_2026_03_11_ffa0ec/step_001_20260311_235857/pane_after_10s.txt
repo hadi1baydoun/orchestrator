@@ -1,0 +1,1 @@
+[snapshot_capture_error] TmuxCommandFailed: Tmux command failed: ssh: connect to host 49.13.149.174 port 22: Connection timed out

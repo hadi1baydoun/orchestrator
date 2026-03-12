@@ -1,0 +1,444 @@
+{
+   "checksum": "69e22130498e066e4e79eecca8ff34ba",
+   "roots": {
+      "bookmark_bar": {
+         "children": [  ],
+         "date_added": "13417730839088122",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13374446965753842",
+            "date_last_used": "13399925822120656",
+            "guid": "420af067-88bc-45e7-89f7-aeb1430cdb9a",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Age Timer",
+            "type": "url",
+            "url": "https://currentage.netlify.app/"
+         }, {
+            "date_added": "13326213935953516",
+            "date_last_used": "13408784354632466",
+            "guid": "e31c3636-b806-4db9-a7a4-f49c85abd6d9",
+            "id": "6",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "FileCR - THE BIGGEST SOFTWARE STORE",
+            "type": "url",
+            "url": "https://filecr.com/en/?id=48622518000"
+         }, {
+            "date_added": "13407348857903738",
+            "date_last_used": "0",
+            "guid": "5e2ec67c-e002-45ed-9801-8aa366c5d0fe",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Domain",
+            "type": "url",
+            "url": "https://ap.www.namecheap.com/domains/domaincontrolpanel/algonney.com/domain"
+         }, {
+            "date_added": "13408383051442591",
+            "date_last_used": "0",
+            "guid": "9380bdc4-7b93-418c-8854-2d06db5f4444",
+            "id": "8",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Dashboard - Alchemy",
+            "type": "url",
+            "url": "https://dashboard.alchemy.com/"
+         }, {
+            "date_added": "13408444333699034",
+            "date_last_used": "13408455948336016",
+            "guid": "f13a81e1-4b16-4b5c-a6d2-3f9f8f619e66",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "hadi baydoun - Admin Console",
+            "type": "url",
+            "url": "https://admin.google.com/u/2/ac/users/4f1mdlm2jeroy2/profile?action_id=ADD_ALIAS&journey=9"
+         }, {
+            "date_added": "13408452843493415",
+            "date_last_used": "0",
+            "guid": "8549c3b6-42ff-42c2-8dc1-83bb7a3e2f72",
+            "id": "10",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "R2 object storage | Cloudflare",
+            "type": "url",
+            "url": "https://dash.cloudflare.com/e1c295579b1c7c3e6498d1d0408ddd1f/r2/default/buckets/algonney-assets"
+         }, {
+            "date_added": "13408575892938036",
+            "date_last_used": "0",
+            "guid": "f31e6897-c573-4cf3-9352-4ecfedcbcf40",
+            "id": "11",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Create Monitor | UptimeRobot",
+            "type": "url",
+            "url": "https://dashboard.uptimerobot.com/monitors/new/http"
+         }, {
+            "date_added": "13408632779519564",
+            "date_last_used": "0",
+            "guid": "405b30d3-8e3e-474a-840b-38ec97ee4b5e",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Projects · Hetzner Console",
+            "type": "url",
+            "url": "https://console.hetzner.com/projects"
+         }, {
+            "date_added": "13408994728130956",
+            "date_last_used": "13409351359722121",
+            "guid": "211fa6d2-b4a7-405e-a14b-dbe6c7be8be6",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Account settings - Admin Console",
+            "type": "url",
+            "url": "https://admin.google.com/u/2/ac/accountsettings?journey=218"
+         }, {
+            "date_added": "13409227326860290",
+            "date_last_used": "0",
+            "guid": "04631537-c71c-43f7-8717-d8b0982c8122",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Overview",
+            "type": "url",
+            "url": "https://search.google.com/search-console?resource_id=https%3A%2F%2Falgonney.com%2F"
+         }, {
+            "date_added": "13409228612008447",
+            "date_last_used": "0",
+            "guid": "0bde3af2-2004-4316-a1c4-b8523d34ae67",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Analytics | Realtime pages",
+            "type": "url",
+            "url": "https://analytics.google.com/analytics/web/provision/#/a376565226p514983225/realtime/pages?params=_u..nav%3Dmaui"
+         }, {
+            "date_added": "13409229730020472",
+            "date_last_used": "0",
+            "guid": "e53a1898-e6af-471f-8505-4a14562d64aa",
+            "id": "16",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Analytics | Realtime pages",
+            "type": "url",
+            "url": "https://analytics.google.com/analytics/web/#/a376565226p514983225/realtime/pages?params=_u..nav%3Dmaui"
+         }, {
+            "date_added": "13410000753772267",
+            "date_last_used": "13416852845496924",
+            "guid": "67985b7e-2857-4476-9653-c56f2cdf1418",
+            "id": "17",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "API keys - OpenAI API",
+            "type": "url",
+            "url": "https://platform.openai.com/api-keys"
+         }, {
+            "date_added": "13410048821741528",
+            "date_last_used": "0",
+            "guid": "b6ccb115-e5ba-4b29-af5c-e9254d1fe64b",
+            "id": "18",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Google AI Studio",
+            "type": "url",
+            "url": "https://aistudio.google.com/u/1/"
+         }, {
+            "date_added": "13410380210171402",
+            "date_last_used": "0",
+            "guid": "32feebdd-1076-475f-a610-0eed293f36c1",
+            "id": "19",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "YTMonster® | Campaigns",
+            "type": "url",
+            "url": "https://www.ytmonster.net/campaigns"
+         }, {
+            "date_added": "13410366005385733",
+            "date_last_used": "0",
+            "guid": "8965dc2f-3954-4c46-8890-13d0a2ae97d1",
+            "id": "20",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "all SMO - Social Media Tools, Up",
+            "type": "url",
+            "url": "https://allsmo.net/#"
+         }, {
+            "date_added": "13410708924300238",
+            "date_last_used": "13410797302598113",
+            "guid": "5ecf60a0-0094-4004-adee-24633ef99830",
+            "id": "21",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Berserk The Dragonslayer - Watch on Crunchyroll",
+            "type": "url",
+            "url": "https://www.crunchyroll.com/watch/G6JQ2WJ4R/the-dragonslayer"
+         }, {
+            "date_added": "13410619563200591",
+            "date_last_used": "0",
+            "guid": "98b36efd-9441-48f8-8bbf-8e8a2f97e073",
+            "id": "22",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Select category | exonums.com",
+            "type": "url",
+            "url": "https://exonums.com/order"
+         }, {
+            "date_added": "13410638603634327",
+            "date_last_used": "0",
+            "guid": "9421c01d-0e8d-4661-b4d8-69c4fed4dc4e",
+            "id": "23",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Free Twitter Followers - Toolkity.Com",
+            "type": "url",
+            "url": "https://toolkity.com/twitter/free-twitter-followers#gsc.tab=0"
+         }, {
+            "date_added": "13410902331633361",
+            "date_last_used": "13410953118307234",
+            "guid": "0b0ee7e2-d4c1-404d-88e3-a54586015c35",
+            "id": "24",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Manage Your Business Wallet | Cryptomus",
+            "type": "url",
+            "url": "https://app.cryptomus.com/business-wallet/merchant/13d5ce45-7dde-49be-a9b5-f3f12eb1eb62/settings"
+         }, {
+            "date_added": "13411603352939638",
+            "date_last_used": "0",
+            "guid": "ee567fb4-40b4-4c12-9f04-545e1381eb87",
+            "id": "25",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Artivty Project | Artivty | Supabase",
+            "type": "url",
+            "url": "https://supabase.com/dashboard/project/neitkbntmdzmtswjskuk"
+         }, {
+            "date_added": "13412271223254976",
+            "date_last_used": "0",
+            "guid": "8bfa52c3-3e81-4643-a774-069de29a3ee5",
+            "id": "26",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "TestSprite",
+            "type": "url",
+            "url": "https://www.testsprite.com/pricing"
+         }, {
+            "date_added": "13413126951356111",
+            "date_last_used": "0",
+            "guid": "8ed22262-48bf-4614-aa0b-aa8560eb6d51",
+            "id": "27",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Algonney Pay",
+            "type": "url",
+            "url": "http://localhost:5173/dashboard/settlement"
+         }, {
+            "date_added": "13413202009565255",
+            "date_last_used": "0",
+            "guid": "f34f392e-8300-4cc2-9c14-ff5c06519838",
+            "id": "28",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Moralis | The Ultimate Web3 Development Platform",
+            "type": "url",
+            "url": "https://admin.moralis.com/streams"
+         }, {
+            "date_added": "13413544859450200",
+            "date_last_used": "0",
+            "guid": "c4be5a5b-3d73-44dd-ae56-928def883325",
+            "id": "29",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ValueLabs | Premium Digital Products at Unbeatable Prices",
+            "type": "url",
+            "url": "https://www.valuelabslb.com/products"
+         }, {
+            "date_added": "13414688031441023",
+            "date_last_used": "0",
+            "guid": "93532d14-9790-44a0-b33e-6014ea18a162",
+            "id": "30",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "BC.GAME: Crypto Casino Games & Casino Slot Games - Crypto Gambling",
+            "type": "url",
+            "url": "https://bc.game/referral"
+         }, {
+            "date_added": "13415366895997374",
+            "date_last_used": "0",
+            "guid": "efa2830d-d7b1-4667-9fb5-f373348fc7c6",
+            "id": "31",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Icons - Lordicon",
+            "type": "url",
+            "url": "https://lordicon.com/icons/wired/outline?i=433-cup-prize"
+         }, {
+            "date_added": "13415372879209135",
+            "date_last_used": "0",
+            "guid": "1540471c-ea89-4614-bab7-8132945bccff",
+            "id": "32",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "trophy icon details – Lucide",
+            "type": "url",
+            "url": "https://lucide.dev/icons/trophy"
+         }, {
+            "date_added": "13415434592036548",
+            "date_last_used": "0",
+            "guid": "a09a0e62-cdf5-490e-9afb-3b8d41f02ade",
+            "id": "33",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Usage and Limits | Google AI Studio",
+            "type": "url",
+            "url": "https://aistudio.google.com/usage?timeRange=this-month&project=gen-lang-client-0439696680"
+         }, {
+            "date_added": "13415542240485779",
+            "date_last_used": "0",
+            "guid": "5b01c061-cc3a-4c80-9fda-144e78e68bde",
+            "id": "34",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "My Billing Account 1 – Overview – Billing – Algonney – Google Cloud console",
+            "type": "url",
+            "url": "https://console.cloud.google.com/billing/01C337-948EF1-0D3B5B?project=gen-lang-client-0115891416&organizationId=332072850131"
+         }, {
+            "date_added": "13415734242343121",
+            "date_last_used": "0",
+            "guid": "9abd75bf-eebd-4d78-9381-438032234075",
+            "id": "35",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Discover iOS apps | Mobbin",
+            "type": "url",
+            "url": "https://mobbin.com/discover/apps/ios/latest"
+         }, {
+            "date_added": "13415814455365541",
+            "date_last_used": "0",
+            "guid": "43504805-20cb-4f8e-b1df-63ff84898a3a",
+            "id": "36",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Zaher.AI - Master Arabic AI Search—Automatically",
+            "type": "url",
+            "url": "https://zaher.ai/app/overview"
+         }, {
+            "date_added": "13416105556724863",
+            "date_last_used": "0",
+            "guid": "24fa4b88-4503-4e1f-976f-f71d2b9a4fe4",
+            "id": "37",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Customer Control Panel - Contabo",
+            "type": "url",
+            "url": "https://my.contabo.com/vps/0#"
+         }, {
+            "date_added": "13416483578810931",
+            "date_last_used": "0",
+            "guid": "2136253e-51d9-4c19-a136-67c3ab446dcd",
+            "id": "38",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "New Tab",
+            "type": "url",
+            "url": "chrome://newtab/"
+         }, {
+            "date_added": "13416662560518281",
+            "date_last_used": "0",
+            "guid": "54d6badc-e15c-44dd-bb24-e2c3e2d76235",
+            "id": "39",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "فيلم كرتون أنا الحقير 3 | Despicable Me 3 2017 مدبلج HD الجزء الثالث – كرتون بوك",
+            "type": "url",
+            "url": "https://www.cartoonbook.net/despicable-me-3/"
+         }, {
+            "date_added": "13416774612038396",
+            "date_last_used": "0",
+            "guid": "a4ef6a0d-8130-45ea-9018-14720dbd25de",
+            "id": "40",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ChatGPT - BackTest Engine",
+            "type": "url",
+            "url": "https://chatgpt.com/g/g-p-699a1e4e0544819189fdf9b6ae32904f-backtest-engine/c/69a30b72-681c-8385-92c8-f7516b220a9a"
+         }, {
+            "date_added": "13417379095205195",
+            "date_last_used": "0",
+            "guid": "6dcd6a53-242a-46b4-a33d-76b27cfabe89",
+            "id": "41",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "AlgoBot Live - Algorithmic Trading Platform",
+            "type": "url",
+            "url": "http://localhost:3001/strategies"
+         } ],
+         "date_added": "13417730839088122",
+         "date_last_used": "0",
+         "date_modified": "13417379095205195",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13417730839088122",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "Ct8BCr4BCIiBAhK3ASAAkgGjAQqgAQoOY2hyb21lX3N5bmNfYm0SBTUxIWJtGhIJnQYpq8RMBgARnQYpq8RMBgAiNAmlacuqxEwGABADGd46EWRp0pcSIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEiNAmlacuqxEwGABADGd46EWRp0pcSIAEqHDUxIWJtL2ZkOjkxNjM3MjM1NTk0Njg4OTMxNjEp+qUpq8RMBgDqAQsI1YXHzQYQkOXlPRIAKhh5ZTBQcTJMTlkwOFR1cW40Z2xDdi9nPT1IAxL0AQgpEu8BChxYZVFja2JYTGFGaC9Id3N1MEIwYWI2VlRuWG89EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjU2c0JpeVZDY1ZQSDNLSEtqditaQVhoL2FQWEtQWi9vRnNndVRyUDY1Mm50dVpTbHhybVlROFJKT3M2U3ptWTF2c3FISTlRPT0YACAAKAAw4Jyu06uOkwM4qfWby8wzQKn1m8vMM0ocWDZ0eGN0YUh6dFgza2Y2TmVKWmZhaS9YYUtvPVonIiX/////AAAAC+lsdUpmL2ZEVWJIUmVybVQrUGxPV0pJK2hwUUU9ZQAAAAAS9AEIJxLvAQocRmFFazNVemlpblhvQ3VVN1JicDFIMXRuc1FNPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41SzV6NVJIalplUWVjQXU5NHFwb3paaDVITjF4ZUdTWUlmcVRET0xjcWxKVTZ5Z2dvY1FPNkR2czZQc2VTMVpyWWtIYk5nUT09GAAgACgAMOKYjqy++ZIDOIaOxvXJM0CGjsb1yTNKHDd4V3BvcVFmeWFnNW92TXNkUHM2akhNcFBRaz1aJyIl/////wAAAAunS2I1MjVXSkhUWDkzVnF6dkZaYWNwZVV5VUZzPWUCcl3zEvMBCCYS7gEKHHNQdjdpVEFialQySXVXWHhsRlVsWmdYcjJEST0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONVVTYk0zWTA1a21IbkFlWmoxNllMRW5IYmExR0NvOE1Xenk5S3U5YkFUc29PMENpUUprbDVNdnd3YUdPcHJyb2tycWI1SWc9PRgAIAAoADCS95vMo/SSAzi795mgyTNAu/eZoMkzShxqaHpUalc5N09FS09sQko0a3JJSFFtSUpEcU09WiYiJP////8AAAALTmRhb2ZJVE5Jc1J6N0Z1S2RWd0RCcUk3N2dVPWXSPxv9EvQBCCMS7wEKHGVVVHZzSEc2cHdGM2hGdHNZSWFxbngwelpROD0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONWtORG1naFhVa3JldHhNRG1ZSWQ4QWFwVnFHMXRWMWl0ZGR5NHgvMC9VWWRsT0kzajl6UjYyTVUxNktTQlFZbXJGMU9vR2c9PRgAIAAoADCH27TJvN6SAziniPK6xjNAp4jyusYzShx5VXEwR1R3UkhhU0lBQi9ORDF2aU11RXFFTWc9WiciJf////8AAAAK+zU0RFp2dkhhZWNlM2FqYmRBOGx5YWpvbmhBZz1lBtgpWRL0AQghEu8BChxMcEIxeE9sQ3B2aVdxOEFzTGczTXVtWXpDWGc9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVWb0lkQlBRQXdjdmtyOVBuMmM3dmtaRWJwMmxJL1NKc01yNnIydElFczduRUlTcVFzbEJOS29OaHRHSStqSDVyWXhtUXdnPT0YACAAKAAw8Zbo59/VkgM4pO6ArMUzQKTugKzFM0ocWGM4cDg2UWhOYzV6SDBCb1ZXWXZkUWZsam9NPVonIiX/////AAAACu1rTk51YjBtc1Flb2x2NVBXMkU3K05DZVppc1U9ZSn6w8kS9AEIHBLvAQocbW95MU04WTQ3L2daRGJoUnd0UFNSVkpxZW1ZPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41dUdLUXQ5dC9ac1FkNyt0T0l3K25EOGFDL1V2am16NXJmc3JVQ1FNNnRKM1p0WmFvbmFydG9VOStKWGowN2VQcjVhSCs2UT09GAAgACgAMN/jreXilJIDON3rtoO9M0Dd67aDvTNKHHlFZmREbXd3OXl3TTVyR05kUDJaU0dkREFFZz1aJyIl/////wAAAAn9MHQ5MFBic2hPdlFMK2RlM3IyTmo3amJjaGNFPWW2cOFcEvQBCBsS7wEKHHdQcFEycm9WRDZuSUI0NXNjVjNvZGJyMmsyWT0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONTJodzBOSSt5Rm42djgwc0pjeHFmM2czbW1LYU5vb0ZqaTdaOUJFYloxOHZXSWpJak1weGVMMURTdk1OZkpaZ29tdWpOVXc9PRgAIAAoADDT4c6T9oaTAzi809HfvDNAvNPR37wzShxTNUFFb3hoNi9Bcmw3QnNnQVRWVDZnRS9BUEk9WiciJf////8AAAAJ+21NVTBzTEl5bWVvaWdyNG5uOVNjNnF3ZHF6dz1lZZilCBL0AQgaEu8BChxycnVKN3JUS29lT2dzVXUrbUY3UzAxbjY5REU9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjV2ZEhaRjNSbkZvUlF5OVllMUl4U3VWK011Nk9IbXl4Z2ZTOXNWN3Q3RURnY09LblFldmFrUDZtMnlPNEhJTks0eldNcnZRPT0YACAAKAAw0LLSq9f5kQM415PMx7kzQNeTzMe5M0ocZTRvbVlDSU55ZmNYM3VmbFFxYkphcEh6bUNrPVonIiX/////AAAACdx4RDFRbGtyR2VuanhVaEdoQmd6TGpsMURIR2M9ZVuJFakS8wEIGRLuAQocUkNqd3Q4WE5yNmxRSXY4N3hNU1lydjk5N2R3PRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41S0J0VHBTRWJseHZPRzZnZkJ6cUtQZCtERlNiWFVoVVJ2ZXZ3b3JpaC8wQUZ1WGNKYWJxYjdtT3dtTGhjVHgzdHhRNnhJUT09GAAgACgAMMyBx6uf5pEDOOzKkIm3M0DsypCJtzNKHHpEWjVEVlB5MG9DMSswN2hjb3FBUjA1NGFBcz1aJiIk/////wAAAAlVWndNd3FvRjh3VjhqeWNwdFgzQlRuc2pxV2c9ZY9++GgS9AEIFxLvAQoceFg3REUvSzRrc1hMUTVqdnBSa3ltdFFzbVlnPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41c1I1T2kvVERzakFJMHhKb3RYMXljNHl3UjQvNnZReW1MelRxbHoxZytOQk9QMUFrSmNNOXJDL05JaSttM3FjVjh0VVRMQT09GAAgACgAMN7GpK6VypEDOPL6jL2zM0Dy+oy9szNKHEZ3c2lXcE5PV3RjY3FXQnFUZUxNNzY3akZocz1aJyIl/////wAAAAj+WmdaNmREYkk2VFljclpyMFJtZ2dZRkFZS2JRPWUikgPuEvQBCCgS7wEKHDRmM0NWQUZUcXJ3cVZzY21GNE5YcTdFK0hVYz0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONW5FRlFUSTlJbzY3SGsyL0ZMaE9rdkk3bjd0Zk9vVVZmMGhzUUtVOUN5TUhueG43dW5yMXNZdWVLVkt3UjlKYVNEZHpkUEE9PRgAIAAoADCz6Z3j3/ySAzjKmP2qyjNAypj9qsozShxVM0Fra1lXN29qUmRXOFpEKzl2STV6MmtGNVU9WiciJf////8AAAAL02hWbkMvZFQyb0ZQRVNaLysyQ2NRdVhEeTRxQT1lhqXYyBL0AQgiEu8BChxnVUZ0cnFycUsrT2VpaDcrTEI0enBxeGZPclU9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVUcHpEYURyQjBQZ2FUM2tpeUZRRWNjT1JabjNlS0krdTdsc2xPR24yTUdjNGQzUGtjeTNlWHNJdHp4K3oxYWlqVEJTZGFRPT0YACAAKAAwrePY6vDYkgM45pmr38UzQOaZq9/FM0ocbjE0UHV4Sk9OVjh3NWNGVGVnRE52VXdOZkh3PVonIiX/////AAAACvZSbGdMdExJUDIwQzBhV2M2MDFETUdNUHYwSTA9ZUtZZPkS9AEIFRLvAQocNllvT3g0MlE3STNjS0ozTWVqMUFKQ1FvMVZnPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41TmJKRUFrYU9zWU1RQjBwdy9pMDMwWjBUMk43U0NWMWF2NjFiZnZLNFZJL2EzSG9nUm9MWW1YK3BLRGhPRllBMEFmYVpaZz09GAAgACgAMLHVveW42JEDOIz/0N6zM0CM/9DeszNKHFh6d0JVaHdoeHU5bndlUmVkOUc1bDZiTlVaVT1aJyIl/////wAAAAj9bWNmVGg1QUJwK016VlFPRWpaR0pyNkpXeXd3PWVJL6X6EvQBCA8S7wEKHDdlME8wL2JpZXVuSXFHOG5PRkJZQ2tTcHNaRT0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONUhnUFdGOWlFRE4vT0xqbFJTZUJmMVllc0R2VWIwY09RWG02MlNpcVhMaWpjM0hLQ0drZ2ZCVjJFSmJDQjhoZGM0ZWhBNVE9PRgAIAAoADDRo7/dkKGRAzio8+GcrjNAqPPhnK4zShxaS21UaWVBVkFRZ0VlNS9tcWVZbGVnMFBqTnM9WiciJf////8AAAAH9mRqbGJVVVc3dkxLOCtmV3lUblNtcHRWb3EzTT1lgiOGWBL0AQgREu8BChxxNVdLS09kQWpIeldKMUVBMWtmV2JwaDFySGc9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjV6QWQwMm5KWExEWXlUZWk4cWcxM1IzSlBrVy9sMTlzcXMrTzU0dkRQU2lneHlBWmthY2E4SFc4eG8rRGgvUUxNNVRCRmhnPT0YACAAKAAw7tG2ooP/kgM47Nj5jLEzQOzY+YyxM0ocR00xazdoR0lnVjIwaWtoRnlhempwdTEycitnPVonIiX/////AAAACN0xQUU1ZW16TXRBODJYWkRVeTJEeThEUkczZGM9ZXzKpK0S9AEIEBLvAQocOFVHY2pMTDRtZytEcDJjVmN0cFFONC8yMjA0PRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41OW16ZnI4SmtwaTdmcnlHVGZ2blZVbHNhcHZKYnpTL2JHM1UvQjJ4SmlpVGoyVFQzK1VaZFhBVkpNTHI2N0RlWnBEdmI5QT09GAAgACgAMMG8zvKUoZEDOOSRpp2uM0DkkaadrjNKHFRGSk5iNXk1dE5sc0pocXdXR3pPQk5aYVU0ST1aJyIl/////wAAAAf7Kzlmd0JQbTJoaHRGS04xTDJtbVFONC9DOTk4PWWCI4ZYEvQBCBQS7wEKHHNpbVhDS2Rqa3BsODNYSkpURzlPMHhpRkswYz0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONUVmWEFNa0JaOC9pUkpvMUJFUmFMTXUxRURXeDZ6SkllUFNNT1FBSjFBZnNxdGMxbzdiQ0xycm4zMnJrWEJ3UFdtNFlIQmc9PRgAIAAoADD1jZ/tncKRAziJ8Y67sjNAifGOu7IzShxPV2g1bndQUHRBZkYxNjBReVR5WXdzMGRnc289WiciJf////8AAAAI+3o3VjRIUzM5dXdwb3RlNEk2WEJnWkNOVjV2dz1l4f/uUxLDAQgDEr4BChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EmZaOkFEcXRBWnlwQ2NwMkN4Y3FXMStMVE5TS2NYRGdJejd0Z3gvOVFOa3JOY3lFaElqeWdyY1hXUk54U29ldkNyM0tVTlo4QjdaaG80MlVZK2xZaGhzendJdzg4SWZQdU03UDh3PT0YACAAKAAwpdOt1sqYkwM4AEAAShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABL0AQgYEu8BChx4dVNJZEJxSFU3eEoyL1VuS2ovTU5kT2k5Wms9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVJV2ZVaWRuMjU1T3kwaXlqOWVGaDY2UndFTzNEMDJCTklOd2w0bjRrb2c3bllPUkhjWEJPcWdFWVUxaVVyYjMxRTBLWFVnPT0YACAAKAAwsdW95bjYkQM48dHturQzQPHR7bq0M0ocelZWejhvOGs4VWg0UmhramIzeXZpalhvRVlZPVonIiX/////AAAACP51ZGNnMXZTUUdsUURTVndhMGQyNjdNNkZpNms9ZUxn0+QS9AEIDhLvAQocWnVvTGc1WFVjRFVjS3V6NDQxZks2aGk3SVNRPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41M3hPRG40b05QbVU5d3NrSUQxamNMMklTRURuR1FxYnhia0xLUVlQNTMxY1Rrcm16ZU9SWjVzeHkwWEdWVEFqdXRkaTUrUT09GAAgACgAMLG02fiLoZEDOIy7k5yuM0CMu5OcrjNKHEp4SUdjUVdDV1ZCOWVkYXR4WjJFdEhhTm56ST1aJyIl/////wAAAAftSXcxeEJxWTQ1SkloRHc2YjBOZUlPeVN4WFJFPWXqYXlbEvQBCCQS7wEKHHFDYXFmR29GREFzamFGZWJjY0gzWWFMdThGcz0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONWx5M2dycEF6aWpKRFFhUy9RUUc5dWZ1OHF4bFdjeURKTHBiZXJsTXhRYWtOUDQ1c3FtTUxJQ1pERGFpVUhqWjYvcnJjSkE9PRgAIAAoADDwq4/15uCSAzjF8JHhxjNAxfCR4cYzShxUTVZzVTlEdC9YcEhYalFVVHR4cnR2SXNoL3M9WiciJf////8AAAAK/ThjYU9lMVVyQmFjT2J5S3dFQkFyek9YR3V6ST1lSeY3pRL0AQgIEu8BChxoSGpWcktmVGI2ZERyZjNxTEdYYVZFYXhHY2s9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVHallYUFovVFoxZS9WbCtDdktMN1VpOGF1T05xZndEa0hFcm44Zk1jUXZkckRPYnpWNU1VeFRSa3dISyt5RjhZSVI4VndRPT0YACAAKAAwhLTk48KIkQM4vv3IiaszQL79yImrM0ocd0lXVkJ5UFRJRHVHUXRnOGF0QmNiQ3U4Y2YwPVonIiX/////AAAABvsveWV2cnBlVHFDU01NWFd6M1dRRS9reVRadUE9Zfpw2xMS9AEIDBLvAQocVmlyVGpmelNsWjE5czJiajk3S2Z3V3A5SVdZPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41Ylh4R1Nxc0JFYmQ4V2xhSUdzRHpaSEZOSWJ5UzFzRm9iYUNZb255S3ZvUFFOOE9FK3FjcFM2dWlUa2VlbjNLaTU4cmdwdz09GAAgACgAMM6Q8Irlj5EDOP+V04CsM0D/ldOArDNKHGVGTGpWVEVheTVETmh2eVAvRis4NldHNTF1QT1aJyIl/////wAAAAe1ZTMrYTY5MXpwRE9kNFVrQlNzcXdMMXBkVGpFPWWdmO5OEvQBCBMS7wEKHG1UY0JsZCtaUDh4SjcrU0JmcGdvdE5DbkxXWT0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONTZHNHBVL1NTd3RLSnpKZkFhMG96aEVxZ1ZqdC94MUVOSWxNYkJnWDNFb01GNWdseVBmb0I0dTJUMHNKRjErbVdNdFpuK3c9PRgAIAAoADCx1b3luNiRAzj77/HBsjNA++/xwbIzShxLeHB4OWV2cWVZM3NEQWZzcFlTM0dWWjIvc3c9WiciJf////8AAAAI+2ovbmJML2ZKOTJDYit5OHYyTytzdGNzNitIST1lBYEeKxLzAQgeEu4BChxPTnkvYkphdURkNTV0N3kyOUxIWnB5RGhZYzA9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVsQVBSSXVjTW9hQnROK1dkaFN5cTZGYVpSaUxJRGx5VXAveHB0NmRUSWsvWU1tb29pOXVzc1h0MFRtOGVSTEdJbXpuVHpBPT0YACAAKAAwooCfgY7FkgM40bWCyMIzQNG1gsjCM0oceXpRZWRzSForMXJ1YkFHb2ZMT0JHZW4rRWFNPVomIiT/////AAAACm5HV1AwY0pacjFpMVplaTRsa2wybU4vcDBJOD1lIu0AixL0AQgSEu8BChxma01VUC9La1Zkb2VRRE5pWnNtUkVmU0RSTVU9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVvRThqK1VRaHloRURLamFGT25QbEMxOCtxZ0F3ZUdncXBPa201ejdxRzk2VjFFQmNaRG44UlZmY0FtWGlQakQ4RnUrSTN3PT0YACAAKAAwq5b4pZC6kQM47cPvo7EzQO3D76OxM0occ0MzSGJPVm8xZThBR2dxYWNROGRIbWdtL0Y4PVonIiX/////AAAACO4rNm80V1liV2w0M2x1R2lQbld4QkJOeXVoSEE9ZSn6w8kS8wEICxLuAQocVGgzMCtlcERRTDBQdG0ycy96R0pNUGdKNkdRPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41Zm8yT2lGeDZDMkt4K2lVNVNpclNXTmMrSW1RSmYzWHFtTmdLU2M0NWdhZDhhRlZJUXdGVDVFVVFoZ0VuYzFYQVNpdVJsUT09GAAgACgAMN/rzZWRjpEDOMqLw+WrM0DKi8PlqzNKHHIzSDI2aWh1dElWWTQwRUFWREcwTXpLYWg2az1aJiIk/////wAAAAdrN2VGdEtTVDdZdHVkMFFhUlcySE82cHpJbm89ZUJ9afASwwEIAhK+AQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRJmWjpBRHF0QVp3d3NoaW5IOXZqVnVnTE1QM2J3eXJFdnN1bS93VnJGZFJidkJzWUxTaDQzQUdVZVVDRVpGejNoWUwrclI5UG5mMzFRM3BMTkJiemlnaWQ0QmFaMnc1Y0ZSOGNIQT09GAAgACgAMKXTrdbKmJMDOABAAEocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAAAS9AEIDRLvAQocaUk0aGp3QjZVc1hNVEkyNGU1Y0kwNU5qQXFBPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41a014NE5MYWhUU0s4VG9USzRuTUZSbFBDdkNqSjFEdWNxSWRreFpsS1gyMlZNM1h5YzEvZVoxNXlLNVU0VGdFbEhhdDdRdz09GAAgACgAMI6YnIHapJEDOMPhnq2tM0DD4Z6trTNKHGZSUEhZMmh2NEpCdzdyNDQ4ZFFiYkM5Q0J3Zz1aJyIl/////wAAAAfaa2czcUtKcWNTd0FYdnNIcm5BZWc4RkYxVllvPWXaad5dEvQBCAoS7wEKHHZXeTV6UWpPK3JUbzk2UGVCSTFUYjlKazUwMD0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONWdpWXViT2d4WjB3dlphSWNLUUZKeGd0YU9ubmhjME5sbno4andIRjBNMW9hSHVWNVJvdE1HY012bWhKMnJqcmwzR3FTWXc9PRgAIAAoADCQpvbixoqRAzjl3+yqqzNA5d/sqqszShx0TFJvVndFSXhaSVUzNm5id2FkT0lrMVhlU2c9WiciJf////8AAAAG/lJsbWpZMC9VaEk0T08vbTc4eHBrcnUxZ3A2az1lFbas9hL0AQgJEu8BChx4dkhHWExEZlVWK3ZzOWhxWlg5dGxVaStpdk09EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjV5LzNlYUVLazFFeVl5UkNmT3hDNUphRExkWklNdTdWN2tUZUQ4U0JUbS9hVEJsK1pqWjJEcUJyVm1mdmNzdW91L3VjVVp3PT0YACAAKAAwnqD5q9KKkQM4h63lpqszQIet5aarM0ocWnVuNm5WNi9vb240TnJMMC9lUno4V0RpN0o4PVonIiX/////AAAABv0zVUsyMUpncDlQbzhXaTlXZVhzNjJtZ3NMMVk9Zdpp3l0S9AEIJRLvAQocY3ZTL0ZQYWVjZXgzelY4MHJ0Y3NKQ2RrbG1vPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41K3VhM0hXTUttSlcvME9VaGlWcGNqazg1WUVhdENXMUZDbUp2aHJUb2hkeStWVktVQWYxNllKUWs5MmhNUXFsakFBZ2FMdz09GAAgACgAMJ/YyKyj6ZIDOPWl+evHM0D1pfnrxzNKHDdmVVZXRHBRY2NkZGduRm1yZXJONmk3RTdUaz1aJyIl/////wAAAAr+VTFVSFlENlNxZmMxMytVc0kvSGxJejYyTTJjPWWvKNmGEvQBCB0S7wEKHFRNaW40Z0wySGJOT0N1WXRXQUY5Zlp5ZUlCMD0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONWdzT01vN3ZJVzdmZ2k3ckxhemRZNjh0VnA1RUIxV0s1Y2tsUTV2dDlKTS9ZcVhwZzI5bU9xaGRZZlBRQXVMcWx1bHZQL0E9PRgAIAAoADDOupaB4J6SAzi63vSmvjNAut70pr4zShxScUlhRDhpTzZjUm1ONTljYjliRFlzcmVKRnc9WiciJf////8AAAAJ/mMwWG5aWGE4cjAyZHFqK3NpOWJOUlFzQUVwRT1lOsoipxL0AQgHEu8BChxkSFNTZldETWRjWld4SGQydkgwUEZ5QTBJUU09EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVmV3JjbGRtZThyUjg2T1pTS1NqbVdxdHBqbHpzMC94WmcrN25mdWxPdmpwZjE5L0JKMTc0TTA5bExnNTB0b3o3eXIxYmlnPT0YACAAKAAwqoWHjrbqkAM4sOi2nKczQLDotpynM0ocVER5eUc4UndvL1JpYUlRNDdadWFTY3pPWDBvPVonIiX/////AAAABu02b21IZ3NQaTFUK1dmZU4rbS95cGZmYjhrZ009ZaIBIGcS8wEIBhLuAQocUENRSkVsaTdpeEEyUkJwdW0wUDBPY21VbHc0PRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41eUxMQ3ZpWEhWTkprclVMOVEvdDg1QTJSSDhJaFYyL1JuK0NJYnBoR055M2wvejZTaHVtSi93WFlUWHRhdW5UVmhEOHh1Zz09GAAgACgAMKzTtOCZlJEDONKWpPz4MEDSlqT8+DBKHHQ4RngxaVZRSlVXdE51dnVRNjdpNjJvMThGdz1aJiIk/////wAAAARFWUtQblcvY094cnVJaEM0RFNEeEhBc0luelk9ZWYbkFIS7wEIBRLqAQocZ2NMSytsQkNxU0Nva1lPRlRzK2pHK3lnWjZvPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41Q1kzRjRlazdEZWZPTjVlR2Nzdzl2aUxSdGZjS0RDSUpLc2psejdSa2VmWnBvREMvd3JjZXBPMWl0dDZjcFhIc0dPRWNVZz09GAAgACgAMLee9JKxko8DOPnXytOsMkD518rTrDJKHDBhZGUrcVBWeEVPVG52RGVXbjJCaGUyNEN2Yz1aIiIg////+k5yeXFiWnFac0I4ODNkVm53OHVoMFVncW1hdz1lrsXNHhL0AQggEu8BChwrTnVWMUt2UHRqZmxMLzBvTC92by8wcjN5L3c9EmZaOkFEcXRBWndWODNxR045SkM2aWh5dGc5WVRaTjVUS0w5Tk42NENuYUNOUzZyM2JwY2kremRsK0ZGazFJRXhia1hNU0h6T1piM0ZPRHVCRm1TbmJSSklBVzJxWUJoZzR4Uk9RPT0YACAAKAAwkMry8/nTkgM46ZrKjsUzQOmayo7FM0ocL0ROLzBpUVV5Zm5sdWIzd1Y5emZVWGJNQkc0PVonIiX/////AAAACttUK1ozZ2hhN3F4YVY4TVlHaHVIczFLcGEwV0k9Zebf6PISqwEIARKmAQoceXhKLzZmdmtlY3I3a3A1RVF6QjR0V0xwZGJFPRJOWjpBRHF0QVp6RGE4cEdxb2hZalNDT2Rxc2t2VjExeEJPLyt1bU9nMkhySHBqOEdnUlJUOE9UYkRrVXpRN3h3bEhrcGkrUkM2OGlmUGpMGAAgACgAMKXTrdbKmJMDOABAAEocYVJDV0xnaEY5YjVJbnFLSUR2dUovanZRa0ZjPVoAZQAAAAAS9AEIHxLvAQocTGhKcG1INUZtb0ZHcmZValdUUEtVUWlHMDhVPRJmWjpBRHF0QVp3VjgzcUdOOUpDNmloeXRnOVlUWk41ZlMyc1JHYVpYRU9Hd211WEdGdFVOMEM3WGZxeWQ4R3VNaDdRL05XMXViaTUzQVU3c0pGWFJtenhhbStISHVjK0VrazAydz09GAAgACgAMKmsz8/j05IDOP2C3YvFM0D9gt2LxTNKHGRZSmpKRnJxRjF5SU1MS0J5L3JIaXo4S0g5VT1aJyIl/////wAAAAq3aU5zTW9STFFjS1JMdllMb0p2dGlTUk1TTXdJPWXaKvCWEvQBCBYS7wEKHEpmM0loSTdacEYzNW1KSjlNdGF5RDNEelpSUT0SZlo6QURxdEFad1Y4M3FHTjlKQzZpaHl0ZzlZVFpONVdmb1Y0Z3h5S2NaWTZrSW10Vk9xblRmRDJvSUY1SXhxWG9TWWZhSmZjYlVzZXNaTVBIL3ZMODJLa2twT2pWZy92aW05NUE9PRgAIAAoADCrkLS3zsmRAzjA6YK0szNAwOmCtLMzShxPUUovSlBPSllkS1BaWmtPYkE4MGVRa1prcDQ9WiciJf////8AAAAI/XZyU2NxZGJCOFFLR0YwamkwUzR4SEdLSTgrOD1lVqeFHTABOAA=",
+   "version": 1
+}

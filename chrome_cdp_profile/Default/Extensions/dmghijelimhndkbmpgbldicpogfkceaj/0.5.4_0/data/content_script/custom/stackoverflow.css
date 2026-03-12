@@ -1,0 +1,57 @@
+.favicon,
+.svg-icon,
+.answered-accepted,
+.js-consent-banner,
+.s-btn.s-btn__filled,
+.s-btn.s-btn__outlined,
+.top-bar .-marketing-link.is-selected,
+.question-hyperlink, .answer-hyperlink,
+#onetrust-consent-sdk #onetrust-banner-sdk,
+.s-post-summary .s-post-summary--content-title a,
+.bg-white, .h\:bg-white:hover, .f\:bg-white:focus,
+.question-hyperlink:visited, .answer-hyperlink:visited,
+.bg-orange-400, .h\:bg-orange-400:hover, .f\:bg-orange-400:focus,
+.s-post-summary .s-post-summary--stats-item.has-answers.has-accepted-answer,
+.post-tag, .geo-tag, .container .chosen-choices .search-choice, .container .chosen-container-multi .chosen-choices li.search-choice {
+  filter: invert(100%) !important;
+  -webkit-filter: invert(100%) !important;
+}
+
+.s-btn__filled,
+.s-btn__primary,
+.svg-icon, .svg-spot,
+.grid--cell.s-btn.s-btn__primary {
+  filter: invert(0) !important;
+  -webkit-filter: invert(0) !important;
+}
+
+.site-footer {
+  background-color: #e6e6e6 !important;
+}
+
+.post-tag {
+  background-color: #1b1b1b !important;
+}
+
+.product-hero-background {
+  opacity: 0.5;
+}
+
+.s-btn {
+  opacity: 0.7;
+}
+
+.s-post-summary .s-post-summary--meta-tags > a,
+.s-post-summary .s-post-summary--meta-tags .s-tag,
+.s-post-summary .s-post-summary--meta-tags .post-tag,
+  .s-post-summary .s-post-summary--meta-tags > ul > li > a {
+  color: #cfcfcf !important;
+}
+
+.s-btn.s-btn__outlined {
+  background-color: #d5d5d5 !important;
+}
+
+.user-info .user-action-time a {
+  color: #a16c1b !important;
+}

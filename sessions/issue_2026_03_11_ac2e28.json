@@ -1,0 +1,70 @@
+{
+  "session_id": "issue_2026_03_11_ac2e28",
+  "title": "Investigate admin deposit page missing records and wrong status display",
+  "issue_description": "Investigate an issue where the admin deposit page may not be showing all deposits and may not correctly display whether deposits are pending or completed. Systems involved may include AlgonneyPay, treasury events, algonney.com backend, database queries, admin API endpoints, and frontend table/status mapping. Start in investigate mode, read-only only, with one and only one step per cycle. For each step, focus on the single highest-priority check needed to trace the deposit data path end-to-end and determine the exact root cause. Do not change code, schema, or data. Stop only when the issue is proven, blocked, or clearly ready for a fix proposal.",
+  "issue_seed_prompt": "Investigate admin deposit page missing records and wrong status display",
+  "operator_constraints": null,
+  "project_context": null,
+  "status": "stalled",
+  "mode": "investigate",
+  "project": "algonney",
+  "tmux_target": "claude_bot:0.0",
+  "created_at": "2026-03-11T21:35:04.105138",
+  "updated_at": "2026-03-11T21:36:45.467010",
+  "step_count": 3,
+  "max_steps": 30,
+  "history": [
+    {
+      "step_number": 1,
+      "planner_status": "continue",
+      "step_title": "Identify the exact admin deposit data source and status mapping",
+      "prompt_for_claude": "In read-only mode, trace the admin deposit page data source inside algonney.com only. Find: (1) the frontend file/component for the admin deposit page/table, (2) the exact API endpoint it calls, (3) the backend handler/service/query that returns the deposit rows, and (4) the code that maps backend/raw deposit status into the UI label shown (pending/completed/etc). Do not inspect AlgonneyPay yet and do not change anything. Return only the file paths, function names, endpoint path, and a concise end-to-end flow summary of page -> API -> handler/service -> query -> status mapping.",
+      "claude_output": "SUMMARY:\n[1-2 sentence summary of findings]\n\nFILES:\n- path: /path/to/file.ext\n- function: function_name\n\nFLOW:\n1. Step one\n2. Step two\n\nFINDINGS:\n- Evidence-based finding 1\n- Evidence-based finding 2\n\nLIKELY_BREAKPOINTS:\n- Potential issue location 1\n- Potential issue location 2\n\nRECOMMENDED_NEXT_CHECK:\n- Specific next action to verify",
+      "claude_summary": "[1-2 sentence summary of findings]",
+      "planner_interpretation": "Before checking AlgonneyPay, treasury events, or DB rows, we need to prove which algonney.com frontend page/API endpoint/backend handler actually powers the admin deposit table and how it maps deposit statuses. This is the highest-priority step because missing records and wrong pending/completed labels may both originate from the page reading the wrong endpoint, filtering results, or remapping statuses incorrectly.",
+      "timestamp": "2026-03-11T21:35:52.896521",
+      "files_touched": [
+        "/path/to/file.ext"
+      ]
+    },
+    {
+      "step_number": 1,
+      "planner_status": "continue",
+      "step_title": "Identify the exact admin deposit data source and status mapping",
+      "prompt_for_claude": "In read-only mode, trace the admin deposit page data source inside algonney.com only. Find: (1) the frontend file/component for the admin deposit page/table, (2) the exact API endpoint it calls, (3) the backend handler/service/query that returns the deposit rows, and (4) the code that maps backend/raw deposit status into the UI label shown (pending/completed/etc). Do not inspect AlgonneyPay yet and do not change anything. Return only the file paths, function names, endpoint path, and a concise end-to-end flow summary of page -> API -> handler/service -> query -> status mapping.",
+      "claude_output": "SUMMARY:\n[1-2 sentence summary of findings]\n\nFILES:\n- path: /path/to/file.ext\n- function: function_name\n\nFLOW:\n1. Step one\n2. Step two\n\nFINDINGS:\n- Evidence-based finding 1\n- Evidence-based finding 2\n\nLIKELY_BREAKPOINTS:\n- Potential issue location 1\n- Potential issue location 2\n\nRECOMMENDED_NEXT_CHECK:\n- Specific next action to verify",
+      "claude_summary": "[1-2 sentence summary of findings]",
+      "planner_interpretation": "Before checking AlgonneyPay, treasury events, or DB rows, we need to prove which algonney.com frontend page/API endpoint/backend handler actually powers the admin deposit table and how it maps deposit statuses. This is the highest-priority step because missing records and wrong pending/completed labels may both originate from the page reading the wrong endpoint, filtering results, or remapping statuses incorrectly.",
+      "timestamp": "2026-03-11T21:36:09.442963",
+      "files_touched": [
+        "/path/to/file.ext"
+      ]
+    },
+    {
+      "step_number": 1,
+      "planner_status": "continue",
+      "step_title": "Inspect the backend deposit query and filters used by the admin API",
+      "prompt_for_claude": "In read-only mode, inspect only the algonney.com backend code path already identified for the admin deposit API. Trace the exact query used to fetch admin deposit rows and report: (1) file paths and function names, (2) source table(s)/view(s), (3) joins, (4) WHERE filters/scoping rules, (5) ORDER BY, (6) pagination/default limits, and (7) any status-related filtering or transformation done before the response is returned. Do not inspect frontend or AlgonneyPay in this step. Return only concrete evidence from code and a concise note on whether this query could explain missing deposit records.",
+      "claude_output": "SUMMARY:\n [1-2 sentence summary of findings]\n\n FILES:\n - path: /path/to/file.ext\n - function: function_name\n\n FLOW:\n 1. Step one\n 2. Step two\n\n FINDINGS:\n - Evidence-based finding 1\n - Evidence-based finding 2\n\n LIKELY_BREAKPOINTS:\n - Potential issue location 1\n - Potential issue location 2\n\n RECOMMENDED_NEXT_CHECK:\n - Specific next action to verify",
+      "claude_summary": "[1-2 sentence summary of findings]   FILES:",
+      "planner_interpretation": "Step 1 established the page -> API -> backend flow. The next highest-priority check is the exact backend query logic, because missing records are most likely caused by WHERE clauses, joins, pagination/default limits, tenant scoping, or status filters in the admin API before the data ever reaches the frontend.",
+      "timestamp": "2026-03-11T21:36:35.408572",
+      "files_touched": [
+        "/path/to/file.ext"
+      ]
+    }
+  ],
+  "approval": {
+    "status": "none",
+    "request_type": null,
+    "reason": null,
+    "approved_commands": [],
+    "denied_reason": null,
+    "requested_at": null,
+    "decided_at": null
+  },
+  "resolution_summary": "HUMAN_ACTION:",
+  "stall_reason": null,
+  "last_checkpoint": "2026-03-11T21:36:35.408572",
+  "recovery_attempts": 0
+}

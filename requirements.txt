@@ -1,0 +1,23 @@
+# Bot Orchestrator Requirements
+
+# Core dependencies
+pydantic>=2.0
+pydantic-settings>=2.0
+openai>=1.0
+click>=8.0
+
+# Browser automation (for web mode)
+playwright>=1.40.0
+
+# Utilities
+tenacity>=8.0
+python-dotenv>=1.0
+
+# Optional: For better terminal output
+rich>=13.0
+
+# Development dependencies (optional)
+# pytest>=7.0
+# pytest-asyncio>=0.21
+# black>=23.0
+# mypy>=1.0

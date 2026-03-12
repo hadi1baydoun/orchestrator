@@ -1,0 +1,5 @@
+2026/03/11-21:27:19.157 1010 Creating DB d:\bot_orchestrator\chrome_cdp_profile\Default\Local Storage\leveldb since it was missing.
+2026/03/11-21:27:19.205 1010 Reusing MANIFEST d:\bot_orchestrator\chrome_cdp_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/11-21:31:00.625 34fc Level-0 table #5: started
+2026/03/11-21:31:00.629 34fc Level-0 table #5: 54590 bytes OK
+2026/03/11-21:31:00.633 34fc Delete type=0 #3

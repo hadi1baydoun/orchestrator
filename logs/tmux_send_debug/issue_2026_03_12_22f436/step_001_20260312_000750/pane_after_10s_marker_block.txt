@@ -1,0 +1,26 @@
+# has_start_marker=True
+# has_end_marker=True
+# is_complete=True
+# extracted_len=336
+#======================================================================
+SUMMARY:
+[1-2 sentence summary of findings]
+
+FILES:
+- path: /path/to/file.ext
+- function: function_name
+
+FLOW:
+1. Step one
+2. Step two
+
+FINDINGS:
+- Evidence-based finding 1
+- Evidence-based finding 2
+
+LIKELY_BREAKPOINTS:
+- Potential issue location 1
+- Potential issue location 2
+
+RECOMMENDED_NEXT_CHECK:
+- Specific next action to verify

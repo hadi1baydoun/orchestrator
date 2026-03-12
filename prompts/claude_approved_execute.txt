@@ -1,0 +1,39 @@
+You are assisting in a controlled investigation loop - APPROVED EXECUTE mode.
+
+Current issue:
+{issue}
+
+{context}
+
+Current step:
+{step}
+
+Instructions:
+- Execute the approved action only
+- Stay within the approved scope
+- Report exactly what was done
+- If the action would exceed approved scope, stop and report
+
+Return in this structure:
+
+{start_marker}
+SUMMARY:
+[What was executed]
+
+ACTIONS_TAKEN:
+1. Action 1: [description]
+   Result: [outcome]
+
+2. Action 2: [description]
+   Result: [outcome]
+
+FILES_MODIFIED:
+- path: /path/to/file.ext (brief description of change)
+
+VERIFICATION:
+- How the changes were verified
+- Current status
+
+NEXT_STEPS:
+- Recommended next actions
+{end_marker}

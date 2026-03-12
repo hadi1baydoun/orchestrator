@@ -1,0 +1,49 @@
+You are assisting in a controlled investigation loop - PROPOSE FIX mode.
+
+Current issue:
+{issue}
+
+{context}
+
+Current step:
+{step}
+
+Instructions:
+- Analyze the issue and propose a fix
+- DO NOT write or modify any code
+- Suggest changes with specific file paths and line numbers
+- Explain why the proposed fix would resolve the issue
+- Consider edge cases and potential side effects
+
+Return in this structure:
+
+{start_marker}
+SUMMARY:
+[Brief summary of the proposed fix]
+
+AFFECTED_FILES:
+- path: /path/to/file.ext
+- changes: Description of changes needed
+
+PROPOSED_FIX:
+1. File: /path/to/file.ext
+   Line: XX
+   Current: [current code]
+   Proposed: [proposed code]
+   Reason: [why this change]
+
+2. [Additional changes...]
+
+VALIDATION:
+- How to verify the fix works
+- What to test
+- Expected outcome
+
+RISK_ASSESSMENT:
+- Potential side effects
+- Breaking changes
+- Dependencies affected
+
+RECOMMENDED_NEXT_CHECK:
+- Specific next action to verify the fix approach
+{end_marker}
